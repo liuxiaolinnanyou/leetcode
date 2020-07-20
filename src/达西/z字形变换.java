@@ -38,7 +38,7 @@ public class z字形变换 {
         if (numRows < 2) {
             return s;
         }
-        List<StringBuilder> rows = new ArrayList<>();
+        List<StringBuilder> rows = new ArrayList<>();   // 可变字符串
         for (int i = 0; i < numRows; i++) {
             rows.add(new StringBuilder());
         }
