@@ -6,7 +6,10 @@ package newcoder_剑指offer;
 // NOTE：给出的所有元素都大于0，若数组大小为0，请返回0。
 public class 数组的旋转 {
     public static void main(String[] args) {
-
+//        int[] arr = new int[3];
+//        System.out.println(arr[0]);
+//        System.out.println(arr[1]);
+//        System.out.println(arr[2]);
     }
 
     // 笨方法

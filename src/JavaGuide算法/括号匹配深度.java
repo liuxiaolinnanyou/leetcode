@@ -11,9 +11,9 @@ import java.util.Scanner;
  * <p>
  * <p>
  * 定义它的深度：
- *      空串""的深度是0
- *      如果字符串"X"的深度是x，字符串"Y"的深度是y，那么字符串"XY"的深度为max(x,y)
- *      如果"X"的深度是x，那么字符串"(X)"的深度是x+1
+ * 空串""的深度是0
+ * 如果字符串"X"的深度是x，字符串"Y"的深度是y，那么字符串"XY"的深度为max(x,y)
+ * 如果"X"的深度是x，那么字符串"(X)"的深度是x+1
  * <p>
  * 输入描述：
  * 输入一个合法的括号序列s，s的长度length(2 <= length <= 50)，序列中只包含 '(' 和 ')'
@@ -32,8 +32,7 @@ public class 括号匹配深度 {
     public static int depth(String s) {
         int cnt = 0;
         int max = 0;
-        int i;
-        for (i = 0; i < s.length(); i++) {
+        for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
                 cnt++;
             } else {
