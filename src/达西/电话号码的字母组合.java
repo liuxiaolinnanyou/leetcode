@@ -75,7 +75,9 @@ public class 电话号码的字母组合 {
 
     public static List<String> letterCombinations2(String digits) {
         List<String> res = new ArrayList<>();
-        if (digits == null || digits.length() == 0) return res;
+        if (digits == null || digits.length() == 0) {
+            return res;
+        }
         permute(res, digits, new StringBuilder());
         return res;
     }
