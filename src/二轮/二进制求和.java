@@ -21,8 +21,8 @@ public class 二进制求和 {
     }
 
     public static String addBinary(String a, String b) {
-        // return Integer.toBinaryString(Integer.parseInt(a, 2) + Integer.parseInt(b, 2));
         // 不通过
+        // return Integer.toBinaryString(Integer.parseInt(a, 2) + Integer.parseInt(b, 2));
 
         StringBuffer ans = new StringBuffer();
         int n = Math.max(a.length(), b.length());
