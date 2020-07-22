@@ -9,7 +9,8 @@ package 一轮;
  */
 public class 最大子序和 {
     public static void main(String[] args) {
-
+        int[] arr = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+        System.out.println(maxSubArray(arr));
     }
 
     // 动态规划首先对数组进行遍历，当前最大连续子序列和为 sum，结果为 ans
