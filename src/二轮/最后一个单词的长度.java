@@ -43,6 +43,7 @@ public class 最后一个单词的长度 {
         return s.substring(start).length();
     }
 
+    // 方法 3
     public static int lengthOfLastWord3(String s) {
         if (s == null || s.length() == 0) {
             return 0;
