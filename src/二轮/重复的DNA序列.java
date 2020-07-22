@@ -15,13 +15,13 @@ import java.util.Set;
  */
 public class 重复的DNA序列 {
     public static void main(String[] args) {
-
+        System.out.println(findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"));
+        System.out.println(findRepeatedDnaSequences2("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"));
     }
 
     public static List<String> findRepeatedDnaSequences(String s) {
         int L = 10, n = s.length();
         HashSet<String> seen = new HashSet(), output = new HashSet();
-
 
         for (int start = 0; start < n - L + 1; ++start) {
             String tmp = s.substring(start, start + L);
