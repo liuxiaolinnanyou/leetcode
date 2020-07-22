@@ -17,7 +17,12 @@ import java.util.Arrays;
  */
 public class 加1 {
     public static void main(String[] args) {
-
+        int[] arr1 = {1, 2, 3};
+        int[] arr2 = {4, 3, 2, 1};
+        int[] arr3 = {1, 0, 9, 9};
+        System.out.println(Arrays.toString(plusOne(arr1)));
+        System.out.println(Arrays.toString(plusOne(arr2)));
+        System.out.println(Arrays.toString(plusOne(arr3)));
     }
 
     public static int[] plusOne(int[] digits) {
