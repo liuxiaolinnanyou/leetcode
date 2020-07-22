@@ -25,7 +25,9 @@ public class 重复的DNA序列 {
 
         for (int start = 0; start < n - L + 1; ++start) {
             String tmp = s.substring(start, start + L);
-            if (seen.contains(tmp)) output.add(tmp);
+            if (seen.contains(tmp)) {
+                output.add(tmp);
+            }
             seen.add(tmp);
         }
         return new ArrayList<>(output);
