@@ -17,7 +17,8 @@ package 二轮;
  */
 public class 二进制求和 {
     public static void main(String[] args) {
-
+        System.out.println(5 + '0');
+        System.out.println('0' + 5);
     }
 
     public static String addBinary(String a, String b) {
