@@ -18,7 +18,7 @@ import java.util.List;
  */
 public class 不同的二叉搜索树 {
     public static void main(String[] args) {
-
+        System.out.println(generateTrees(3));
     }
 
     // 二叉搜索树关键的性质是根节点的值大于左子树所有节点的值，小于右子树所有节点的值，且左子树和右子树也同样为二叉搜索树。
