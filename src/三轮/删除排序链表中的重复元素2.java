@@ -26,7 +26,9 @@ public class 删除排序链表中的重复元素2 {
         ListNode dummy = new ListNode(-1);                   // 建立一个虚拟头结点
         ListNode tail = dummy;                                 // 定义一个尾巴，用于尾插法。
         for (ListNode l = head, r = head; l != null; l = r) {
-            while (r != null && r.val == l.val) r = r.next;   // 只要r不为空并且与l的值相等则一直向后移动
+            while (r != null && r.val == l.val) {
+                r = r.next;
+            }   // 只要r不为空并且与l的值相等则一直向后移动
             if (l.next == r) {                                // 若长度为1，则通过尾插法加入。
                 tail.next = l;                                // 基本的尾插法
                 tail = l;
