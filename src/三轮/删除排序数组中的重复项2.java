@@ -28,21 +28,28 @@ public class 删除排序数组中的重复项2 {
         return i;
     }
 
+    // 与删除排序数组中的重复项问题的区别是，可以重复两个
+    // 增加一个重复个数的状态repeatNum
+    // 当快指针指向的是和慢指针相同的元素，用repeatNum判断
     public static int removeDuplicates2(int[] nums) {
-        if (nums == null || nums.length == 0) {
-            return 0;
-        }
-        // 1.指针定义 [0,index] 是修改后无重复的排序元素 注意 这里已经把 0 纳入进去了
-        int index = 0;
-        // 2.另一个循环指针 从1开始，终止为nums.length，为什么从1开始 因为我们要比较重复 nums[0] 肯定是不重复的
-        for (int i = 1; i < nums.length; i++) {
-            // 3.指针运动的条件
-            if (nums[index] != nums[i]) {
-                index++;
-                nums[index] = nums[i];
+        int show = 0;
+        // 增加一个重复个数的状态
+        int repeatNum = 1;
+        for (int fast = 1; fast < nums.length; fast++) {
+            if (nums[fast] != nums[show]) {
+                nums[++show] = nums[fast];
+                // 计数清除
+                repeatNum = 1;
+            } else {
+                // 如果重复次数小于2次，还可以移动
+                if (repeatNum < 2) {
+                    // 如果快指针和慢指针不是挨着，就需要赋值
+                    nums[++show] = nums[fast];
+                    // 重复次数增加
+                    repeatNum++;
+                }
             }
         }
-        // 4.根据定义确定返回值
-        return index + 1;
+        return show + 1;
     }
 }
