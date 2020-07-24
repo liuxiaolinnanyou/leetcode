@@ -35,8 +35,9 @@ public class Hw102_字符统计 {
             }
             int max = 0;
             for (int i = 0; i < 256; i++) {
-                if (mat[i] > max)
+                if (mat[i] > max) {
                     max = mat[i];
+                }
             }
             String res = "";
             for (int j = max; j > 0; j--) {
