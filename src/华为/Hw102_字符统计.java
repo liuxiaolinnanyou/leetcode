@@ -26,7 +26,7 @@ public class Hw102_字符统计 {
         Scanner in = new Scanner(System.in);
         while (in.hasNext()) {
             String str = in.next();
-            int[] mat = new int[256];
+            int[] mat = new int[128];
             for (int i = 0; i < str.length(); i++) {
                 if ((str.charAt(i) >= 'a' && str.charAt(i) <= 'z') || (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') || (str.charAt(i) >= '0' && str.charAt(i) <= '9' || str.charAt(i) == ' ')) {
                     int pos = str.charAt(i);
@@ -34,14 +34,14 @@ public class Hw102_字符统计 {
                 }
             }
             int max = 0;
-            for (int i = 0; i < 256; i++) {
+            for (int i = 0; i < 128; i++) {
                 if (mat[i] > max) {
                     max = mat[i];
                 }
             }
             String res = "";
             for (int j = max; j > 0; j--) {
-                for (int k = 0; k < 256; k++) {
+                for (int k = 0; k < 128; k++) {
                     if (mat[k] == j)
                         res += (char) k;
                 }
