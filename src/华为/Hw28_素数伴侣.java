@@ -52,6 +52,7 @@ public class Hw28_素数伴侣 {
                     odds.add(nums[i]);
                 }
             }
+
             long[] evensMatch = new long[evens.size()];
             int result = 0;
             for (int i = 0; i < odds.size(); i++) {
