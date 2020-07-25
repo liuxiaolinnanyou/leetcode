@@ -35,7 +35,7 @@ public class 分隔链表2 {
     // 创建新链表
     public static ListNode[] splitListToParts(ListNode root, int k) {
         ListNode cur = root;
-        int n = 0;
+        int n = 0;    // 统计节点个数
         while (cur != null) {
             cur = cur.next;
             n++;
