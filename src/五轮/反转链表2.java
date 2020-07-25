@@ -36,7 +36,6 @@ public class 反转链表2 {
         for (int i = 0; i < n - m; i++) {
             ListNode removed = p.next;
             p.next = p.next.next;
-
             removed.next = g.next;
             g.next = removed;
         }
