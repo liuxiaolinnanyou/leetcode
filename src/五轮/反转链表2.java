@@ -14,11 +14,11 @@ public class 反转链表2 {
     }
 
     // 双指针 - 头插法
-    // 我们首先根据方法的参数m确定g和p的位置。将g移动到第一个要反转的节点的前面，
-    // 将p移动到第一个要反转的节点的位置上。我们以m=2，n=4为例。
-    // (2)将p后面的元素删除，然后添加到g的后面。也即头插法。
-    // 根据m和n重复步骤(2)
-    // 返回dummyHead.next
+    // 我们首先根据方法的参数 m 确定 g 和 p 的位置。将 g 移动到第一个要反转的节点的前面，
+    // 将p移动到第一个要反转的节点的位置上。我们以 m=2，n=4为例。
+    // (2)将 p 后面的元素删除，然后添加到 g 的后面。也即头插法。
+    // 根据 m 和 n 重复步骤(2)
+    // 返回 dummyHead.next
     public static ListNode reverseBetween(ListNode head, int m, int n) {
         ListNode dummyHead = new ListNode(0);
         dummyHead.next = head;
