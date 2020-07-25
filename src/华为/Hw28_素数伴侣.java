@@ -79,6 +79,7 @@ public class Hw28_素数伴侣 {
         return false;
     }
 
+    // 判断是否是素数
     private static boolean isPrime(long num) {
         for (int i = 2; i < Math.sqrt(num); i++) {
             if (num % i == 0) {
