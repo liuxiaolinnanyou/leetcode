@@ -23,6 +23,7 @@ public class 分隔链表 {
             if (head.val < x) {                 // 找到小的值
                 minP.next = head;               // 放入minLink中，操作指针后移一位
                 minP = head;
+//                minP = minP.next;
             } else {
                 maxP.next = head;              // 放入maxLink中，操作指针后移一位
                 maxP = head;
