@@ -40,8 +40,10 @@ public class 分隔链表2 {
             cur = cur.next;
             n++;
         }
+
         int width = n / k;
         int rem = n % k;
+
         ListNode[] ans = new ListNode[k];
         cur = root;
         for (int i = 0; i < k; i++) {
