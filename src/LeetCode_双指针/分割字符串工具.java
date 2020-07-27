@@ -2,13 +2,15 @@ package LeetCode_双指针;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class 分割字符串工具 {
     public static void main(String[] args) throws UnsupportedEncodingException {
-//        StringTokenizer st = new StringTokenizer("Welcome to our country");
-//        while (st.hasMoreTokens()) {
-//            System.out.println(st.nextToken());
-//        }
+        StringTokenizer st = new StringTokenizer("Welcome to our country");
+        while (st.hasMoreTokens()) {
+            System.out.println(st.nextToken());
+        }
+        System.out.println("-----------------------------");
 
         String s1 = "中国";
         String s2 = "china";
