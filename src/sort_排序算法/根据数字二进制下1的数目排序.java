@@ -23,6 +23,9 @@ import java.util.Arrays;
  * <p>
  * 输入：arr = [10,100,1000,10000]
  * 输出：[10,100,10000,1000]
+ * <p>
+ * 1 <= arr.length <= 500
+ * 0 <= arr[i] <= 10^4
  */
 public class 根据数字二进制下1的数目排序 {
     public static void main(String[] args) {
