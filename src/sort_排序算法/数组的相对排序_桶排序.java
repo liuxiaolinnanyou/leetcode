@@ -11,7 +11,7 @@ import java.util.Arrays;
  * 输入：arr1 = [2,3,1,3,2,4,6,7,9,2,19], arr2 = [2,1,4,3,9,6]
  * 输出：[2,2,2,1,4,3,3,9,6,7,19]
  */
-public class 数组的相对排序 {
+public class 数组的相对排序_桶排序 {
     public static void main(String[] args) {
         int[] arr1 = {2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19};
         int[] arr2 = {2, 1, 4, 3, 9, 6};
