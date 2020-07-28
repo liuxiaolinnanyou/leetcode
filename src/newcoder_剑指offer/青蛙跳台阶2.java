@@ -8,6 +8,7 @@ public class 青蛙跳台阶2 {
         System.out.println(jumpFloor(2));
     }
 
+    // f(n)=2f(n-1)
     public static int jumpFloor(int target) {
         return 1 << (target - 1);
         // return Math.pow(2, target - 1);
