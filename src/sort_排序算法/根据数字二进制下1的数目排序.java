@@ -39,7 +39,7 @@ public class 根据数字二进制下1的数目排序 {
         System.out.println(Arrays.toString(sortByBits(arr4)));
 //        System.out.println(Integer.bitCount(5));
 //        System.out.println(Integer.bitCount(7));      // 统计二进制中 1 的个数
-
+//        System.out.println(Integer.bitCount(9999));
     }
 
 
