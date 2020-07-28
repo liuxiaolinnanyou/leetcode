@@ -44,7 +44,7 @@ public class 两个数组的交集 {
     }
 
     // 双指针
-    // 先将nums1 与nums2 排序，然后游走两个指针，情况都写出来了，没有用else
+    // 先将nums1 与 nums2 排序，然后游走两个指针，情况都写出来了，没有用else
     public static int[] intersection2(int[] nums1, int[] nums2) {
         Set<Integer> set = new HashSet<>();
         Arrays.sort(nums1);
