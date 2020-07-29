@@ -31,7 +31,7 @@ public class 删除排序数组中的重复项 {
             }
             q++;
         }
-        return p + 1;
+        return p + 1;      // 返回的是元素的个数
 
 
         // 优化
