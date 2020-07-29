@@ -47,7 +47,7 @@ public class 报数 {
                 }
             }
         }
-        s.deleteCharAt(s.length() - 1);
+        s.deleteCharAt(s.length() - 1);   // 去除的是最后一个 空格 字符
         return s.toString();
     }
 
