@@ -40,7 +40,7 @@ public class 报数 {
                     if (stud[i] % m == 0) {
                         s.append(i + 1).append(" ");
                         nums++;
-                        stud[i] = -1;
+                        stud[i] = -1;    // 置 -1 无法继续访问
                     } else {
                         stud[i] = end++;
                     }
