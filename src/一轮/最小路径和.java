@@ -17,6 +17,7 @@ public class 最小路径和 {
     public static void main(String[] args) {
         int[][] arr = {{1, 3, 1}, {1, 5, 1}, {4, 2, 1}};
         System.out.println(minPathSum(arr));
+        System.out.println(minPathSum2(arr));
     }
 
     // 暴力法
