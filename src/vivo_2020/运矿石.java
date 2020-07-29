@@ -48,7 +48,9 @@ public class 运矿石 {
                 }
             }
         }
-        if ((n & 1) == 0) return sum - dp[rows][cols] * 2;
+        if ((n & 1) == 0) {
+            return sum - dp[rows][cols] * 2;
+        }
         return sum - Math.max(dp[rows][cols], dp[rows - 1][cols]) * 2;
     }
 }
