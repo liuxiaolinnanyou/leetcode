@@ -19,6 +19,8 @@ import java.util.List;
 public class 括号生成 {
     public static void main(String[] args) {
         System.out.println(generateParenthesis(3));
+        System.out.println("-----------------------");
+        System.out.println(generateParenthesis2(3));
     }
 
     // 暴力法
