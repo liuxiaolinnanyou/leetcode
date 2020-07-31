@@ -42,6 +42,7 @@ public class 组合总数3 {
         }
     }
 
+    // 不知道为什么加上 static 就通过不了
     // 方法 2    深搜 + 剪枝
     // 一个方法三个参数，k个数、拼凑成n,从<code>start</code>到9这几个数中选。
     static List<List<Integer>> ans = new ArrayList<>();
