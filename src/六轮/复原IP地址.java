@@ -13,7 +13,8 @@ import java.util.List;
 
 public class 复原IP地址 {
     public static void main(String[] args) {
-
+        System.out.println(restoreIpAddresses("25525511135"));
+        System.out.println(restoreIpAddresses2("25525511135"));
     }
 
     // 暴力法
