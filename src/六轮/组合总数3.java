@@ -19,7 +19,8 @@ import java.util.List;
  */
 public class 组合总数3 {
     public static void main(String[] args) {
-
+        System.out.println(combinationSum(3, 7));
+        System.out.println(combinationSum(3, 9));
     }
 
     // 回溯
@@ -35,12 +36,15 @@ public class 组合总数3 {
             return;
         }
         for (int i = start; i <= 9; i++) {
-            if (residue - i < 0) break;
+            if (residue - i < 0) {
+                break;
+            }
             path.add(i);
             helper(k - 1, residue - i, i + 1, path, res);  // path 增加了一个，相应的 k 减少了一个，总和 n 也减少了 i，然后往下迈进一步（i + 1）
             path.remove(path.size() - 1);                           // 撤销上一个操作
         }
     }
+
 
     // 不知道为什么加上 static 就通过不了
     // 方法 2    深搜 + 剪枝
