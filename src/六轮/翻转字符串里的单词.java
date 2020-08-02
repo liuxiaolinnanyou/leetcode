@@ -25,22 +25,23 @@ import java.util.List;
  */
 public class 翻转字符串里的单词 {
     public static void main(String[] args) {
+        // 注意字符串中的中文空格和英文空格的区别
         System.out.println(reverseWords("the sky is blue"));
-        System.out.println(reverseWords("  hello world!  "));
-        System.out.println(reverseWords("a good   example"));
+        System.out.println(reverseWords("  hello world!  "));
+        System.out.println(reverseWords("a good   example"));
     }
 
     // 冷酷无情的API选手     有问题
-//    public static String reverseWords(String s) {
-//        // 去除开头和末尾的空白字符
-//        s = s.trim();
-//        // 正则匹配连续的空白字符作为分隔符分割
-//        List<String> wordList = Arrays.asList(s.split("\\s+"));
-//        Collections.reverse(wordList);
-//        return String.join(" ", wordList);
-//    }
-
     public static String reverseWords(String s) {
+        // 去除开头和末尾的空白字符
+        s = s.trim();
+        // 正则匹配连续的空白字符作为分隔符分割
+        List<String> wordList = Arrays.asList(s.split("\\s+"));
+        Collections.reverse(wordList);
+        return String.join(" ", wordList);
+    }
+
+    public static String reverseWords2(String s) {
         if (s == null || s.length() == 0) {
             return "";
         }
