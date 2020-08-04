@@ -43,7 +43,7 @@ public class 分割回文串 {
      * @param res   记录所有的结果
      */
     private static void backtracking(String s, int start, int len, Deque<String> path, List<List<String>> res) {
-        if (start == len) {
+        if (start == len) {     // 到达字符串末尾
             res.add(new ArrayList<>(path));
             return;
         }
