@@ -11,7 +11,7 @@ import java.util.Arrays;
  */
 public class 计数质数 {
     public static void main(String[] args) {
-
+        System.out.println(countPrimes(10));
     }
 
     // 主要采用了排除法：
