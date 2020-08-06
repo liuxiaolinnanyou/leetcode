@@ -25,7 +25,7 @@ public class Main {
 //            }
 //            double res = 0;
 //            for (int i = 1; i <= n; i++) {
-//                res += 1.0 / ((2 * n - 1) * 2 * n);
+//                res += 1.0 / ((2 * i - 1) * 2 * i);
 //            }
 //            System.out.printf("%.4f\n", res / 5.0);
 //        }
