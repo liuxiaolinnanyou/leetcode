@@ -38,16 +38,18 @@ public class 石头碰撞 {
 
         boolean[] dp = new boolean[sum / 2 + 1];
         dp[0] = true;
-        for (int i = 1; i <= n; i++)
+        for (int i = 1; i <= n; i++) {
             for (int j = sum / 2; j >= nums[i]; j--) {
                 dp[j] |= dp[j - nums[i]];
             }
+        }
 
-        for (int j = sum / 2; j >= 0; j--)
+        for (int j = sum / 2; j >= 0; j--) {
             if (dp[j]) {
                 result = Math.abs(j - (sum - j));
                 break;
             }
+        }
         System.out.println(result);
     }
 }
