@@ -17,6 +17,7 @@ import java.util.Scanner;
  * 提示：
  * 10个数分别是 110 111 112 113 114 115 116 117 118 119
  */
+// 只通过 36%
 public class Main1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
