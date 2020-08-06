@@ -49,6 +49,7 @@ public class 病毒检测 {
         String str = sc.nextLine();
         char[] strChar = str.toCharArray();
         int[] status = new int[k + 2];
+
         status[0] = 1;
         int num = 0;
         long result = 0;
@@ -66,7 +67,6 @@ public class 病毒检测 {
         }
         System.out.println(result);
     }
-
 
 
     /**
