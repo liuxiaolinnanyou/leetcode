@@ -40,10 +40,7 @@ public class 全排列 {
         return res;
     }
 
-    public static void backtrack(int n,
-                                 ArrayList<Integer> output,
-                                 List<List<Integer>> res,
-                                 int first) {
+    public static void backtrack(int n, ArrayList<Integer> output, List<List<Integer>> res, int first) {
         // 所有数都填完了
         if (first == n) {
             res.add(new ArrayList<Integer>(output));
