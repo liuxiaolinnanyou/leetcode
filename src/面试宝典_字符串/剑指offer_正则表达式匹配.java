@@ -8,7 +8,11 @@ package 面试宝典_字符串;
  */
 public class 剑指offer_正则表达式匹配 {
     public static void main(String[] args) {
-
+        System.out.println(match("aaa".toCharArray(), "a.a".toCharArray()));
+        System.out.println(match("aaa".toCharArray(), "ab*ac*a".toCharArray()));
+        System.out.println("------------------------------------------------");
+        System.out.println(match("aaa".toCharArray(), "aa.a".toCharArray()));
+        System.out.println(match("aaa".toCharArray(), "ab*a".toCharArray()));
     }
 
     // 动态规划
