@@ -10,7 +10,7 @@ import java.util.Set;
 public class 删除字符串中的重复元素 {
     public static void main(String[] args) {
 //        String s = "'\0'";
-//        System.out.println(s);
+//        System.out.println((char) '\0');
 
         String s = "abcaabcd";
         System.out.println(removeDuplicate(s));
@@ -22,7 +22,7 @@ public class 删除字符串中的重复元素 {
         char[] chars = s.toCharArray();
         int len = chars.length;
         for (int i = 0; i < len; i++) {
-            if (chars[i] == '\0') {
+            if (chars[i] == '\0') {     // 空字符
                 continue;
             }
             for (int j = i + 1; j < len; j++) {
