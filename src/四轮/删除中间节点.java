@@ -18,7 +18,7 @@ public class 删除中间节点 {
         node1.next = node2;
         node2.next = node3;
         System.out.println(node);
-        deleteNode(node);
+        deleteNode(node1);
         System.out.println(node);
     }
 
