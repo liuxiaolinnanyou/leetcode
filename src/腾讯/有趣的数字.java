@@ -49,10 +49,11 @@ public class 有趣的数字 {
             // map 用来统计
             Map<Integer, Integer> map = new TreeMap<>();
             for (int i = 0; i < n; i++) {
-                if (map.containsKey(a[i]))
+                if (map.containsKey(a[i])) {
                     map.put(a[i], map.get(a[i]) + 1);
-                else
+                } else {
                     map.put(a[i], 1);
+                }
             }
             // 求差最小个数
             int minres = 0;
@@ -60,9 +61,9 @@ public class 有趣的数字 {
                 int min = Math.abs(a[1] - a[0]);
                 for (int i = 2; i < n; i++) {
                     int tmp = Math.abs(a[i] - a[i - 1]);
-                    if (tmp == min)
+                    if (tmp == min) {
                         minres++;
-                    else if (tmp < min) {
+                    } else if (tmp < min) {
                         min = tmp;
                         minres = 1;
                     }
