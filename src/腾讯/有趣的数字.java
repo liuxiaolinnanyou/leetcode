@@ -40,13 +40,13 @@ public class 有趣的数字 {
                 a[i] = sc.nextInt();
             }
             Arrays.sort(a);
-            //如果数组中的值全相同，直接两两组合
+            // 如果数组中的值全相同，直接两两组合
             if (a[0] == a[n - 1]) {
                 int tmp = (n * (n - 1)) / 2;
                 System.out.println(tmp + " " + tmp);
                 continue;
             }
-            //map用来统计
+            // map 用来统计
             Map<Integer, Integer> map = new TreeMap<>();
             for (int i = 0; i < n; i++) {
                 if (map.containsKey(a[i]))
@@ -54,7 +54,7 @@ public class 有趣的数字 {
                 else
                     map.put(a[i], 1);
             }
-            //求差最小个数
+            // 求差最小个数
             int minres = 0;
             if (map.size() == n) {
                 int min = Math.abs(a[1] - a[0]);
@@ -75,7 +75,7 @@ public class 有趣的数字 {
                     }
                 }
             }
-            //求差最大个数
+            // 求差最大个数
             int maxres = 0;
             List<Integer> keyset = new ArrayList<>(map.keySet());
             int val1 = map.get(keyset.get(0));
