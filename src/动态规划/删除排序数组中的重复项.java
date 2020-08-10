@@ -61,7 +61,7 @@ public class 删除排序数组中的重复项 {
         return p + 1;
     }
 
-    // 借助集合
+    // 借助集合      这个不行    不符合题意
     public static int removeDuplicates3(int[] nums) {
         // 去重
         TreeSet<Integer> set = new TreeSet<>();
