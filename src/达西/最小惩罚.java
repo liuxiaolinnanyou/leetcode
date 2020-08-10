@@ -2,6 +2,9 @@ package 达西;
 
 import java.util.*;
 
+/**
+ * 最下惩罚是指对一条路径上所有边的代价执行或运算。
+ */
 public class 最小惩罚 {
     public static void main(String[] args) {
         int[][] edges = {{1, 2, 1}, {2, 3, 3}, {1, 3, 100}};
