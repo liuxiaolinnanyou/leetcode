@@ -35,6 +35,7 @@ public class 最长回文子串 {
         return ans;
     }
 
+    // 判断回文    可以有3种判断方法  while循环   reverse()  for循环
     public static boolean isPalindrome(String s) {
         int len = s.length();
         for (int i = 0; i < len / 2; i++) {    // 奇数中间不需要比较，偶数正好平分
