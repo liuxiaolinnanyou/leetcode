@@ -19,6 +19,7 @@ import java.util.Scanner;
  * 9
  */
 public class Main {
+    // AC 60%
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
