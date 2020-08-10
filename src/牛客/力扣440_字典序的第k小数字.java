@@ -6,6 +6,8 @@ package 牛客;
  * @date 2020/6/18 10:34
  */
 
+import java.util.Arrays;
+
 /**
  * 给定整数 n 和 k，找到 1 到 n 中字典序第 k 小的数字。
  * 注意：1 ≤ k ≤ n ≤ 109。
@@ -18,6 +20,10 @@ package 牛客;
 public class 力扣440_字典序的第k小数字 {
     public static void main(String[] args) {
         System.out.println(findKthNumber(13, 2));
+        System.out.println(findKthNumber2(13, 2));
+        System.out.println("-------------------------");
+        System.out.println(findKthNumber(13, 6));
+        System.out.println(findKthNumber2(13, 6));
     }
 
     public static int findKthNumber(int n, int k) {
@@ -45,5 +51,19 @@ public class 力扣440_字典序的第k小数字 {
             nextPrefix *= 10;
         }
         return count;
+    }
+
+    // 自己写的
+    public static int findKthNumber2(int n, int k) {
+        int[] arr = new int[n];
+        String[] str = new String[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = i + 1;
+        }
+        for (int i = 0; i < n; i++) {
+            str[i] = String.valueOf(arr[i]);
+        }
+        Arrays.sort(str);
+        return Integer.parseInt(str[k - 1]);
     }
 }
