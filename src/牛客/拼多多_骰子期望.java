@@ -43,7 +43,6 @@ public class 拼多多_骰子期望 {
         double qiwang = 0;
         while (x[len - 1] != 1) {
             double a = 1;
-            ;
             for (int i = 0; i < len - 1; i++) {
                 a = a * x[i];
             }
