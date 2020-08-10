@@ -28,7 +28,9 @@ public class 剑指offer_正则表达式匹配 {
         boolean[][] dp = new boolean[str.length + 1][pattern.length + 1];
         dp[0][0] = true;
         for (int i = 1; i < dp[0].length; i++) {
-            if (pattern[i - 1] == '*') dp[0][i] = dp[0][i - 2];
+            if (pattern[i - 1] == '*') {
+                dp[0][i] = dp[0][i - 2];
+            }
         }
         for (int i = 1; i < dp.length; i++) {
             for (int j = 1; j < dp[0].length; j++) {
