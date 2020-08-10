@@ -35,7 +35,7 @@ public class 万万没想到之聪明的编辑 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNext()) {
-            int n = Integer.parseInt(sc.nextLine());
+            int n = Integer.parseInt(sc.nextLine());    // 解决先获取一个数值再获取一个字符串存在的问题
             for (int i = 0; i < n; i++) {
                 StringBuilder sb = new StringBuilder(sc.nextLine());
                 for (int j = 2; j < sb.length(); j++) {
