@@ -23,9 +23,9 @@ import java.util.Scanner;
 public class Hw102_字符统计 {
     public static void main(String[] args) {
         // ascii 的范围 0-127
-        Scanner in = new Scanner(System.in);
-        while (in.hasNext()) {
-            String str = in.next();
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            String str = sc.next();
             int[] mat = new int[128];
             for (int i = 0; i < str.length(); i++) {
                 if ((str.charAt(i) >= 'a' && str.charAt(i) <= 'z') || (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z') || (str.charAt(i) >= '0' && str.charAt(i) <= '9' || str.charAt(i) == ' ')) {
@@ -48,6 +48,6 @@ public class Hw102_字符统计 {
             }
             System.out.println(res);
         }
-        in.close();
+        sc.close();
     }
 }
