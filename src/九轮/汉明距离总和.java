@@ -19,9 +19,9 @@ import java.util.Arrays;
 public class 汉明距离总和 {
     public static void main(String[] args) {
         int[] arr = {4, 14, 2};
-//        System.out.println(totalHammingDistance(arr));
-        System.out.println("------------------------");
-        System.out.println(totalHammingDistance2(arr));
+        System.out.println(totalHammingDistance(arr));
+//        System.out.println("------------------------");
+//        System.out.println(totalHammingDistance2(arr));
     }
 
     // 位运算
@@ -44,6 +44,7 @@ public class 汉明距离总和 {
                 }
             }
         }
+//        System.out.println(Arrays.toString(sums));    // 逆序的表示
         int sum = 0;
         for (int i = 0; i < 32; i++) {          // 通过对每个二进制位上的1的个数和0的个数相乘，求和
             sum += sums[i] * (len - sums[i]);
