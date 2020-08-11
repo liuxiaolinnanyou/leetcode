@@ -16,10 +16,33 @@ package 九轮;
  */
 public class 汉明距离总和 {
     public static void main(String[] args) {
-
+        int[] arr = {4, 14, 2};
+        System.out.println(totalHammingDistance(arr));
     }
 
+    // 位运算
+    // 求数组汉明距离，我们可以每次遍历数组的一位上有多少0和多少1，
+    // 该位的汉明距离的和就是0的个数×1的个数，因为0和0，1和1的汉明距离都是0。然后遍历32位，全部加起来即可。
     public static int totalHammingDistance(int[] nums) {
-        return 0;
+        if (nums.length <= 1) {
+            return 0;
+        }
+        int len = nums.length;
+        int[] sums = new int[32];
+        int x = 0;
+        for (int i = 0; i < len; i++) {           // 统计每个二进制位上的1出现个数
+            for (int j = 0; j < 32; j++) {
+                sums[j] += nums[i] & 1;
+                nums[i] = nums[i] >> 1;
+                if (nums[i] == 0) {
+                    break;
+                }
+            }
+        }
+        int sum = 0;
+        for (int i = 0; i < 32; i++) {          // 通过对每个二进制位上的1的个数和0的个数相乘，求和
+            sum += sums[i] * (len - sums[i]);
+        }
+        return sum;
     }
 }
