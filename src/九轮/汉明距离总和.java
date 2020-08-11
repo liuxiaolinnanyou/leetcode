@@ -29,7 +29,6 @@ public class 汉明距离总和 {
         }
         int len = nums.length;
         int[] sums = new int[32];
-        int x = 0;
         for (int i = 0; i < len; i++) {           // 统计每个二进制位上的1出现个数
             for (int j = 0; j < 32; j++) {
                 sums[j] += nums[i] & 1;
