@@ -1,6 +1,7 @@
 package 十轮;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
@@ -20,7 +21,8 @@ import java.util.Stack;
 public class 下一个更大元素2 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 1};
-        System.out.println(nextGreaterElements(arr));
+        System.out.println(Arrays.toString(nextGreaterElements(arr)));
+        System.out.println(Arrays.toString(nextGreaterElements2(arr)));
     }
 
     // 首先需要解决的问题是，如何实现循环数组，即“最后一个元素的下一个元素是数组的第一个元素”。
@@ -38,7 +40,7 @@ public class 下一个更大元素2 {
         Stack<Integer> stack = new Stack<>();
         int[] res = new int[nums.length];
         for (int i = 0; i < res.length; i++) {
-            res[i] = -1;
+            res[i] = -1;                     // 不存在，置 -1
         }
         for (int i = 0; i < 2 * nums.length - 1; i++) {
             int index = i % nums.length;      // 取模，实现循环数组
