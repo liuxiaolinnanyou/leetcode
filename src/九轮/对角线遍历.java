@@ -19,7 +19,9 @@ import java.util.Arrays;
 public class 对角线遍历 {
     public static void main(String[] args) {
         int[][] arr = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] arr2 = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9, 10}};
         System.out.println(Arrays.toString(findDiagonalOrder(arr)));
+        System.out.println(Arrays.toString(findDiagonalOrder(arr2)));
     }
 
     public static int[] findDiagonalOrder(int[][] matrix) {
