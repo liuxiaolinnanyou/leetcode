@@ -35,12 +35,12 @@ public class 对角线遍历 {
         // 用来保存结果的数组 大小为矩阵的元素个数
         int[] result = new int[m * n];
         for (int i = 0; i < m + n - 1; i++) {
-            // i为0或偶数时 沿对角线向上遍历
+            // i 为 0 或 偶数 时 沿对角线向上遍历
             if (i == 0 || i % 2 == 0) {
-                // 发现规律x+y = i 然后找边界（x坐标超过主对角线时的情况）
+                // 发现规律 x + y = i 然后找边界（x坐标超过主对角线时的情况）
                 int x = i < m ? i : m - 1;
                 int y = i - x;
-                // 开始遍历 x坐标不断减 y坐标不断加 当x减到0 或者 y加到列n的值
+                // 开始遍历 x 坐标不断减 y 坐标不断加 当 x 减到 0 或者 y 加到列 n 的值
                 while (x >= 0 && y < n) {
                     result[count] = matrix[x][y];
                     x--;
@@ -51,7 +51,7 @@ public class 对角线遍历 {
                 // 沿对角线向下遍历
                 int y = i < n ? i : n - 1;
                 int x = i - y;
-                // y坐标不断减 x坐标不断加 当y减到0 或者 x加到行m的值
+                // y 坐标不断减 x 坐标不断加 当 y 减到 0 或者 x 加到行 m 的值
                 while (y >= 0 && x < m) {
                     result[count] = matrix[x][y];
                     y--;
