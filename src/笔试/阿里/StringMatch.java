@@ -3,6 +3,14 @@ package 笔试.阿里;
 import java.util.Arrays;
 import java.util.HashMap;
 
+/**
+ * 现有一个字符串它的构成是 岗位名称 和 , 的组合，如“研发,产品,产品,研发”，要求输入一个匹配模式，
+ * 如xxyy(可以以这种简单的字符来标识), 来判断该字符串是否符合该模式， 举个例子：
+ * <p>
+ * 匹配模式 = "xyyx", 字符串 = "研发,产品,产品,研发" 返回 ture
+ * 匹配模式 = "xxyy", 字符串 = "研发,产品,产品,研发" 返回 false
+ * 匹配模式 = "yxxy", 字符串 = "研发,产品,产品,研发" 返回 ture
+ */
 public class StringMatch {
     public static void main(String[] args) {
         String s1 = "研发,产品,产品,研发";
