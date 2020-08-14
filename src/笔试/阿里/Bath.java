@@ -34,7 +34,7 @@ public class Bath {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(Thread.currentThread().getName() + "我是男人，我洗了" + time + "秒");
+            System.out.println(Thread.currentThread().getName() + "我是男人，我洗了" + time + "秒" + "，我在" + flag.get() + "淋浴间");
             flag.getAndDecrement();
         }
     }
@@ -57,7 +57,7 @@ public class Bath {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(Thread.currentThread().getName() + "我是女人，我洗了" + time + "秒");
+            System.out.println(Thread.currentThread().getName() + "我是女人，我洗了" + time + "秒" + "，我在" + flag.get() + "淋浴间");
             flag.getAndIncrement();
         }
     }
