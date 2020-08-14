@@ -35,7 +35,7 @@ public class Bath {
                 e.printStackTrace();
             }
             System.out.println(Thread.currentThread().getName() + "我是男人，我洗了" + time + "秒" + "，我在" + flag.get() + "淋浴间");
-            flag.getAndDecrement();
+            flag.getAndDecrement();  // 以原子方式将当前值减 1。
         }
     }
 
