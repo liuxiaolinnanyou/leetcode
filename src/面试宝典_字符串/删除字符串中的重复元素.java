@@ -1,8 +1,6 @@
 package 面试宝典_字符串;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.*;
 
 /**
  * 删除字符串中重复的字符 例如："good"变为"god"。
@@ -15,6 +13,7 @@ public class 删除字符串中的重复元素 {
         String s = "abcaabcd";
         System.out.println(removeDuplicate(s));
         System.out.println(removeDuplicate2(s));
+        System.out.println(removeDuplicate3(s));
     }
 
     // 暴力法
@@ -56,6 +55,24 @@ public class 删除字符串中的重复元素 {
         Iterator<Character> iterator = set.iterator();
         while (iterator.hasNext()) {
             sb.append(iterator.next());
+        }
+        return sb.toString();
+    }
+
+
+    // 方法 3 自己写的
+    public static String removeDuplicate3(String s) {
+        ArrayList<Character> list = new ArrayList<>();
+        for (int i = 0; i < s.length(); i++) {
+            if (list.contains(s.charAt(i))) {
+                continue;
+            } else {
+                list.add(s.charAt(i));
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        for (char c : list) {
+            sb.append(c);
         }
         return sb.toString();
     }
