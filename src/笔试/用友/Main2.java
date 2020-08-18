@@ -35,12 +35,15 @@ public class Main2 {
         fee[src] = 0;
         boolean[] marked = new boolean[n];
         int[][] cost = new int[n][n];
+
         for (int i = 0; i < n; i++) {
             Arrays.fill(cost[i], Integer.MAX_VALUE);
         }
+
         for (int i = 0; i < flights.length; i++) {
             cost[flights[i][0]][flights[i][1]] = flights[i][2];
         }
+
         for (int i = 0; i < n; i++) {
             int minFee = Integer.MAX_VALUE;
             int minPos = -1;
@@ -60,6 +63,7 @@ public class Main2 {
                 }
             }
         }
+        // 无法到达的使用 -1 表示
         for (int i = 0; i < n; i++) {
             if (fee[i] == Integer.MAX_VALUE) {
                 fee[i] = -1;
