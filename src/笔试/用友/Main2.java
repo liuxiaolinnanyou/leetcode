@@ -23,7 +23,9 @@ import java.util.Arrays;
  */
 public class Main2 {
     public static void main(String[] args) {
-
+        int[][] arr = {{0, 1, 100}, {1, 2, 100}, {0, 2, 500}};
+        System.out.println(Arrays.toString(findAllCheapestPrice(3, arr, 0)));
+        System.out.println(Arrays.toString(findAllCheapestPrice(3, arr, 1)));
     }
 
     public static int[] findAllCheapestPrice(int n, int[][] flights, int src) {
@@ -33,10 +35,12 @@ public class Main2 {
         fee[src] = 0;
         boolean[] marked = new boolean[n];
         int[][] cost = new int[n][n];
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++) {
             Arrays.fill(cost[i], Integer.MAX_VALUE);
-        for (int i = 0; i < flights.length; i++)
+        }
+        for (int i = 0; i < flights.length; i++) {
             cost[flights[i][0]][flights[i][1]] = flights[i][2];
+        }
         for (int i = 0; i < n; i++) {
             int minFee = Integer.MAX_VALUE;
             int minPos = -1;
@@ -46,17 +50,20 @@ public class Main2 {
                     minPos = j;
                 }
             }
-            if (minPos == -1)
+            if (minPos == -1) {
                 continue;
+            }
             marked[minPos] = true;
             for (int j = 0; j < n; j++) {
-                if (cost[minPos][j] != Integer.MAX_VALUE && cost[minPos][j] + fee[minPos] < fee[j])
+                if (cost[minPos][j] != Integer.MAX_VALUE && cost[minPos][j] + fee[minPos] < fee[j]) {
                     fee[j] = cost[minPos][j] + fee[minPos];
+                }
             }
         }
         for (int i = 0; i < n; i++) {
-            if (fee[i] == Integer.MAX_VALUE)
+            if (fee[i] == Integer.MAX_VALUE) {
                 fee[i] = -1;
+            }
         }
         return fee;
     }
