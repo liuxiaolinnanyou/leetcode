@@ -38,7 +38,7 @@ public class Main1 {
             return 0;
         }
 
-        int[] dp = {0, 0, 0, 0, 0};
+        int[] dp = {0, 0, 0, 0, 0};   // 模 5 为 0 1 2 3 4
         for (int i = 0; i < nums.length; ++i) {
             int mod = nums[i] % 5;
             int a = dp[(5 + 0 - mod) % 5];
@@ -46,6 +46,7 @@ public class Main1 {
             int c = dp[(5 + 2 - mod) % 5];
             int d = dp[(5 + 3 - mod) % 5];
             int e = dp[(5 + 4 - mod) % 5];
+
             if (a > 0 || mod == 0) {
                 dp[0] = Math.max(dp[0], a + nums[i]);
             }
