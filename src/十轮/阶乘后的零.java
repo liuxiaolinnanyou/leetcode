@@ -17,6 +17,7 @@ public class 阶乘后的零 {
     public static void main(String[] args) {
         System.out.println(trailingZeros(3));
         System.out.println(trailingZeros(5));
+        System.out.println(trailingZeros(10000));
     }
 
     // 含 5 的个数
