@@ -43,9 +43,10 @@ public class 一和零 {
             return 0;
         }
         int[][] dp = new int[m + 1][n + 1];
-        for (String str : strs) {
+        for (String str : strs) {    // 遍历字符串数组
             int zeros = 0;
             int ones = 0;
+            // 统计的是字符串数组中 1 和 0 的总数量
             for (int i = 0; i < str.toCharArray().length; i++) {
                 if (str.toCharArray()[i] == '0') {
                     zeros++;
