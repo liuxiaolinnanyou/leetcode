@@ -23,32 +23,52 @@ import java.util.Scanner;
  * E_DB2C
  * DC
  */
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int n = Integer.parseInt(sc.nextLine());
+//        String[] arr = new String[n];
+//        int count = 0;
+//        for (int i = 0; i < n; i++) {
+//            arr[i] = sc.nextLine();
+//        }
+//        for (String s : arr) {
+//            if (s.length() > 10 || s == null || s.length() == 0) {
+//                continue;
+//            }
+//            boolean flag = false;
+//            for (int j = 0; j < s.length(); j++) {
+//                if (s.contains("_")) {
+//                    flag = false;
+//                    break;
+//                } else {
+//                    flag = true;
+//                }
+//            }
+//            if (flag) {
+//                count++;
+//            }
+//        }
+//        System.out.println(count);
+//    }
+//}
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = Integer.parseInt(sc.nextLine());
-        String[] arr = new String[n];
+        Scanner scanner = new Scanner(System.in);
+        int n = Integer.valueOf(scanner.nextLine());
         int count = 0;
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextLine();
-        }
-        for (String s : arr) {
-            if (s.length() > 10 || s == null || s.length() == 0) {
-                continue;
-            }
-            boolean flag = false;
-            for (int j = 0; j < s.length(); j++) {
-                if (s.contains("_")) {
-                    flag = false;
-                    break;
-                } else {
-                    flag = true;
+        for (int i = 0; i < n; ++i) {
+            String input = scanner.nextLine();
+            if (10 >= input.length()) {
+                if (input.matches("[a-zA-Z]*")) {
+                    count++;
                 }
-            }
-            if (flag) {
-                count++;
             }
         }
         System.out.println(count);
+        scanner.close();
     }
 }
