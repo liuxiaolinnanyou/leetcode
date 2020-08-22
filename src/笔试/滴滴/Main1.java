@@ -15,10 +15,6 @@ public class Main1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-//        if (n == 1) {
-//            System.out.println(1);
-//            return;
-//        }
         long[][] arr = new long[n][n];
         List<Long> list = new ArrayList<>();
         list.add((long) 1);
@@ -31,7 +27,7 @@ public class Main1 {
             b = c;
             list.add(c);
         }
-        Collections.sort(list);
+//        Collections.sort(list);
         Collections.reverse(list);
 //        System.out.println(list);
 
