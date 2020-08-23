@@ -23,7 +23,7 @@ import java.util.Scanner;
  * E_DB2C
  * DC
  */
-//public class Main {
+//public class Main {     // 数字也是不合法的 注意审题
 //    public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);
 //        int n = Integer.parseInt(sc.nextLine());
@@ -58,11 +58,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = Integer.valueOf(scanner.nextLine());
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.valueOf(sc.nextLine());
         int count = 0;
         for (int i = 0; i < n; ++i) {
-            String input = scanner.nextLine();
+            String input = sc.nextLine();
             if (10 >= input.length()) {
                 if (input.matches("[a-zA-Z]*")) {
                     count++;
@@ -70,6 +70,6 @@ public class Main {
             }
         }
         System.out.println(count);
-        scanner.close();
+        sc.close();
     }
 }
