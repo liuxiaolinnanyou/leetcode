@@ -1,8 +1,8 @@
 package 笔试.滴滴;
 
-import javax.sound.midi.Soundbank;
-import java.sql.SQLOutput;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 /**
  * A+B问题：

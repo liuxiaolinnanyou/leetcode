@@ -59,15 +59,18 @@ public class Main1 {
         }
         String[] sArr = s.split("[ \t]");
         int sLen = sArr.length;
+        // 使用 LinkedList 实现栈
         LinkedList<String> oriStack = new LinkedList<>();
         Stack<String> unStack = new Stack<>();
         for (int i = 0; i < sLen; i++) {
             if (sArr[i].compareTo("undo") == 0) {
-                if (!oriStack.isEmpty())
+                if (!oriStack.isEmpty()) {
                     unStack.push(oriStack.pollLast());
+                }
             } else if (sArr[i].compareTo("redo") == 0) {
-                if (!unStack.empty())
+                if (!unStack.empty()) {
                     oriStack.addLast(unStack.pop());
+                }
             } else {
                 oriStack.addLast(sArr[i]);
                 unStack.clear();

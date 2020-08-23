@@ -5,11 +5,11 @@ import java.util.Arrays;
 /**
  * 最便宜的价格列表
  * <p>
- * 有n个城市通过m个航班连接，每个航班都从城市u开始，以价格w抵达v，
- * 现在给定所有的城市和航班，以及出发城市src，你的任务是找到从src
+ * 有 n 个城市通过 m 个航班连接，每个航班都从城市 u 开始，以价格 w 抵达v，
+ * 现在给定所有的城市和航班，以及出发城市 src ，你的任务是找到从 src
  * 出发到其他所有城市最便宜的机票价格列表。
- * 假设两个城市之间机票价格不会超过Integer.MAX_VALUE，如果无法从src
- * 到达某个城市，则他们的价格用-1表示。
+ * 假设两个城市之间机票价格不会超过Integer.MAX_VALUE，如果无法从 src
+ * 到达某个城市，则他们的价格用 -1 表示。
  * <p>
  * 输入：
  * n=3， edges=[[0,1,100],[1,2,100],[0,2,500]],src=0
@@ -44,7 +44,7 @@ public class Main2 {
             cost[flights[i][0]][flights[i][1]] = flights[i][2];
         }
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {    // 做 n 次循环
             int minFee = Integer.MAX_VALUE;
             int minPos = -1;
             for (int j = 0; j < n; j++) {
