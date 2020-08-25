@@ -28,9 +28,9 @@ public class 数组中出现次数超过一半的数字 {
         int preValue = array[0];        // 用来记录上一次的记录
         int count = 1;                  // preValue出现的次数（相减之后）
         for (int i = 1; i < array.length; i++) {
-            if (array[i] == preValue)
+            if (array[i] == preValue) {
                 count++;
-            else {
+            } else {
                 count--;
                 if (count == 0) {
                     preValue = array[i];

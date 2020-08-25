@@ -10,6 +10,10 @@ public class 简单选择排序 {
         printArray(arr);
     }
 
+    // 简单选择排序的思想是：
+    // 从代排序的数组中挑选最小的放在第一个位置
+    // 从剩下的元素中继续挑选最小的放在第二个位置
+    // 以此类推
     public static void selectionSort(int[] arr) {
         if (arr == null || arr.length < 2) {
             return;
