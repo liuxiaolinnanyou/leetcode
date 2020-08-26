@@ -26,7 +26,7 @@ public class 二叉搜索树的后序遍历序列 {
         if (start >= root) {
             return true;
         }
-        int key = sequence[root];
+        int key = sequence[root];    // 根节点
         int i;
         // 找到左右子树的分界点
         for (i = start; i < root; i++) {
