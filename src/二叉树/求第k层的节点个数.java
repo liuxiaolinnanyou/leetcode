@@ -1,6 +1,5 @@
 package 二叉树;
 
-import javax.swing.*;
 import java.util.LinkedList;
 import java.util.Queue;
 

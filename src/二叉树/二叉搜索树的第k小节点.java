@@ -3,19 +3,19 @@ package 二叉树;
 import java.util.Stack;
 
 /**
- * 给定一棵二叉搜索树，请找出其中的第k小的结点。例如，（5，3，7，2，4，6，8）中，按结点数值大小顺序第三小结点的值为4。
+ * 给定一棵二叉搜索树，请找出其中的第 k 小的结点。例如，（5，3，7，2，4，6，8）中，按结点数值大小顺序第三小结点的值为 4。
  */
 public class 二叉搜索树的第k小节点 {
     public static void main(String[] args) {
 
     }
 
-    public static TreeNode kthNode(TreeNode pRoot, int k) {
-        if (pRoot == null || k <= 0) {
+    public static TreeNode kthNode(TreeNode Root, int k) {
+        if (Root == null || k <= 0) {
             return null;
         }
         Stack<TreeNode> stack = new Stack<>();  // 建立栈
-        TreeNode cur = pRoot;
+        TreeNode cur = Root;
         // 中序遍历
         while (!stack.isEmpty() || cur != null) {
             if (cur != null) {
