@@ -4,6 +4,7 @@ package 测试2;
 public class 两个线程交替执行 {
     public static void main(String[] args) {
         final Object object = new Object();
+
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
