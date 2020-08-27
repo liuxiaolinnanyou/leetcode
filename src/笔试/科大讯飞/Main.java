@@ -25,9 +25,10 @@ public class Main {
         int m = sc.nextInt();
         long res = 0;
         Row[] maxArr = new Row[n];
-        int[][] arr = new int[n][m];
+        int[][] arr = new int[n][m];     // 矩阵，用来存元素
+
         for (int i = 0; i < n; i++) {
-            int maxV = 0;
+            int maxV = 0;        // maxV 和 secMaxV 存储的分别是最大值和次最大值的索引
             int secMaxV = 0;
             for (int j = 0; j < m; j++) {
                 arr[i][j] = sc.nextInt();
@@ -38,7 +39,9 @@ public class Main {
             }
             maxArr[i] = new Row(i, maxV, secMaxV);
         }
+
         Arrays.sort(maxArr, (a, b) -> (arr[b.row][b.max] == arr[a.row][a.max] ? arr[b.row][b.secMax] - arr[a.row][a.secMax] : arr[b.row][b.max] - arr[a.row][a.max]));
+
         if (maxArr[0].max != maxArr[1].max) {
             System.out.println((long) arr[maxArr[0].row][maxArr[0].max] * (long) arr[maxArr[1].row][maxArr[1].max]);
         } else {
