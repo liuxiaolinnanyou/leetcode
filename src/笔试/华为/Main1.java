@@ -21,10 +21,12 @@ public class Main1 {
 //        System.out.println(split[1]);
         String[] split1 = split[0].split("\\,");
         String[] split2 = split[1].split("\\,");
+
         if (split1.length != split2.length) {
             System.out.println(0);
             return;
         }
+
         for (int i = 0; i < split1.length; i++) {
             int num = Integer.parseInt(split1[i]);
             if (num <= 0) {
@@ -32,6 +34,7 @@ public class Main1 {
                 return;
             }
         }
+
         for (int i = 0; i < split2.length; i++) {
             int num = Integer.parseInt(split2[i]);
             if (num <= 0) {
@@ -39,6 +42,7 @@ public class Main1 {
                 return;
             }
         }
+
         int sum = 0;
         for (int i = 0; i < split1.length; i++) {
             int a = Integer.parseInt(split1[i]);
