@@ -11,6 +11,7 @@ public class 两个线程交替执行2 {
     public static void main(String[] args) {
         final Lock lock = new ReentrantLock();
         final Condition condition = lock.newCondition();
+
         ExecutorService executorService = Executors.newCachedThreadPool();
         executorService.execute(new Runnable() {
             @Override
