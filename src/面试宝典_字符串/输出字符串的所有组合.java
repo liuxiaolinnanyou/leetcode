@@ -1,7 +1,5 @@
 package 面试宝典_字符串;
 
-import sun.applet.Main;
-
 /**
  * 假设字符串中的所有字符都不重复，如何输出字符串的所有组合？例如： 输入"abc"，则输出a、b、c、ab、ac、bc、abc。共7种组合。
  */

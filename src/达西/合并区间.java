@@ -1,6 +1,7 @@
 package 达西;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * 给出一个区间的集合，请合并所有重叠的区间。
