@@ -71,7 +71,8 @@ public class Main1 {
         // 另一种写法
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] s = new int[n];
+//        int[] s = new int[n];
+
         int[] A_1 = new int[51];
         int[] A_2 = new int[51];
         A_1[50] = 1;
