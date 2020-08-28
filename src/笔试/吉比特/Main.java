@@ -16,6 +16,7 @@ import java.util.Scanner;
  * 输出：
  * 1
  */
+
 // AC 90
 public class Main {
     public static void main(String[] args) {

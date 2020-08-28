@@ -16,7 +16,7 @@ import java.util.Scanner;
  * 37 33 22
  */
 public class Main1 {
-    // AC 0
+    // AC 0    给的测试用例都通过，但是提交通过不了
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 //        int a = sc.nextInt();
