@@ -55,8 +55,10 @@ public class LeetCode_通配符匹配 {
         int pn = p.length();
         int i = 0;
         int j = 0;
+
         int start = -1;
         int match = 0;
+        // 从前向后一次遍历比较两个字符串是否匹配
         while (i < sn) {
             if (j < pn && (s.charAt(i) == p.charAt(j) || p.charAt(j) == '?')) {
                 i++;
