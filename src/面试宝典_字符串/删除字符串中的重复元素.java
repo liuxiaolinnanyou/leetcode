@@ -10,6 +10,8 @@ public class 删除字符串中的重复元素 {
 //        String s = "'\0'";
 //        System.out.println((char) '\0');
 
+//        System.out.println('\0' + 1);     // 空子符的 ASCII 码为 0
+
         String s = "abcaabcd";
         System.out.println(removeDuplicate(s));
         System.out.println(removeDuplicate2(s));
