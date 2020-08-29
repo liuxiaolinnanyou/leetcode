@@ -24,7 +24,13 @@ import java.util.Map;
  */
 public class 电话号码的字母组合 {
     public static void main(String[] args) {
-
+        // 关于substring():不赋值调用的话，只是返回一个结果，不会改变原字符串。
+        String s = "abcdefg";
+        System.out.println(s.substring(0, 1));
+        System.out.println("---------------");
+        System.out.println(s);
+        s = s.substring(1);
+        System.out.println(s);
     }
 
     // 方法 1
@@ -41,7 +47,7 @@ public class 电话号码的字母组合 {
 
     public static List<String> letterCombinations(String digits) {
         List<String> output = new ArrayList<>();
-        if (digits.length() != 0) {
+        if (digits.length() != 0) {   // 这边只是一个判断，不是循环，不要误以为是一个循环，只会执行一次。
             backtrack("", digits, output);
         }
         return output;

@@ -35,10 +35,8 @@ public class 缩写校验 {
         while (i < words.length && j < abbrs.length) {
             if (Character.isDigit(abbrs[j]) && abbrs[j] != '0') {
                 int times = 0;
-                int count = 1;
                 while (j < abbrs.length && Character.isDigit(abbrs[j])) {
-                    times = count * times + abbrs[j] - '0';
-                    count = count * 10;
+                    times = times * 10 + abbrs[j] - '0';
                     j++;
                 }
                 i = i + times;
