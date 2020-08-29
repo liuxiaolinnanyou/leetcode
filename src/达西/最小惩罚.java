@@ -1,6 +1,9 @@
 package 达西;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 最下惩罚是指对一条路径上所有边的代价执行或运算。
@@ -29,21 +32,18 @@ public class 最小惩罚 {
         }
         used[start] = true;
         dfs(edges, roads, used, end, start, 1);
-        used[end] = false;
+//        used[end] = false;
         return res;
     }
 
     public static void dfs(int[][] edges, Map<Integer, List<Integer>> roads, boolean[] used, int end, int pos, int weight) {
         if (pos == end) {
-            if (weight < res)
+            if (weight < res) {
                 res = weight;
+            }
             return;
         }
-//		if (weight > res * 2)
-//			return;
-//		System.out.println(roads);
         List<Integer> toGo = roads.get(pos);
-//		System.out.println(toGo);
         int alterWayNum = toGo.size();
         for (int i = 0; i < alterWayNum; i++) {
             int thisWayIdx = toGo.get(i);
