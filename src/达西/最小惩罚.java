@@ -23,6 +23,7 @@ public class 最小惩罚 {
         Map<Integer, List<Integer>> roads = new HashMap<>();
         boolean[] used = new boolean[n + 1];
         for (int i = 0; i < roadsNum; i++) {
+            // 这边存的是索引，比如顶点 1 在原数组中有 0 索引 和 2 索引都含有顶点 1
             List<Integer> tmp = roads.getOrDefault(edges[i][0], new ArrayList<Integer>());
             tmp.add(i);
             roads.put(edges[i][0], tmp);
