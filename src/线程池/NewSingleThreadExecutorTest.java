@@ -8,7 +8,7 @@ public class NewSingleThreadExecutorTest {
         // 创建一个单线程化的线程池
         ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
         for (int i = 0; i < 10; i++) {
-            final int index = i;
+            int index = i;
             singleThreadExecutor.execute(new Runnable() {
                 @Override
                 public void run() {

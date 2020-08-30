@@ -1,9 +1,5 @@
 package 笔试.海康威视;
 
-import com.sun.xml.internal.bind.v2.model.core.ID;
-
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 //        Scanner sc = new Scanner(System.in);

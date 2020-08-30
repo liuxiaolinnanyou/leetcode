@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 /**
  * 给定一个由英文字母组成的字符串，假定字符 c1 和 字符 c2 在字符串中的位置分别为 p1 和 p2，求 p1 和 p2 差的绝对值的最大值。
- *
+ * <p>
  * 输入只有一行，依次为一个由英文字母组成的字符串、字符1和字符2
  * 字符串长度不超过64 ，字母不区分大小写
- *
+ * <p>
  * 输出一个整数，为字符最大距离，如果给定字符不在字符串中，则输出 -1 即可。
- *
+ * <p>
  * 输入：
  * ba A b
  * 输出：
@@ -31,7 +31,7 @@ public class Main {
             if (c1 == c2) {
                 System.out.println(0);
                 return;
-            }else if (!str.contains("" + c1) || !str.contains("" + c2)) {
+            } else if (!str.contains("" + c1) || !str.contains("" + c2)) {
                 System.out.println(-1);
                 return;
             }
