@@ -23,6 +23,7 @@ public class 下一个更大元素2 {
         int[] arr = {1, 2, 1};
         System.out.println(Arrays.toString(nextGreaterElements(arr)));
         System.out.println(Arrays.toString(nextGreaterElements2(arr)));
+        System.out.println(Arrays.toString(nextGreaterElements3(arr)));
     }
 
     // 首先需要解决的问题是，如何实现循环数组，即“最后一个元素的下一个元素是数组的第一个元素”。
@@ -78,6 +79,26 @@ public class 下一个更大元素2 {
                 j++;
                 count++;
             }
+        }
+        return res;
+    }
+
+    public static int[] nextGreaterElements3(int[] nums) {
+        int res[] = new int[nums.length];
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < nums.length; i++) {
+            while (!stack.empty() && nums[i] > nums[stack.peek()]) {
+                res[stack.pop()] = nums[i];
+            }
+            stack.push(i);
+        }
+        for (int i = 0; i < nums.length; i++) {
+            while (!stack.empty() && nums[i] > nums[stack.peek()]) {
+                res[stack.pop()] = nums[i];
+            }
+        }
+        while (!stack.isEmpty()) {
+            res[stack.pop()] = -1;
         }
         return res;
     }
