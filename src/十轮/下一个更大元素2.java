@@ -39,9 +39,10 @@ public class 下一个更大元素2 {
     public static int[] nextGreaterElements(int[] nums) {
         Stack<Integer> stack = new Stack<>();
         int[] res = new int[nums.length];
-        for (int i = 0; i < res.length; i++) {
-            res[i] = -1;                     // 不存在，置 -1
-        }
+//        for (int i = 0; i < res.length; i++) {
+//            res[i] = -1;                     // 不存在，置 -1
+//        }
+        Arrays.fill(res, -1);
         for (int i = 0; i < 2 * nums.length - 1; i++) {
             int index = i % nums.length;      // 取模，实现循环数组
             while (!stack.isEmpty() && nums[stack.peek()] < nums[index]) {   // 找到下一个更大元素

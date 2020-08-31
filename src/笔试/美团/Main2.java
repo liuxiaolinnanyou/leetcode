@@ -1,6 +1,7 @@
 package 笔试.美团;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 public class Main2 {
     public static class Car {

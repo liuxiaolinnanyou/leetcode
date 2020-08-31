@@ -27,6 +27,7 @@ public class Main1 {
             return;
         }
 
+        // 转成 int 数组
         for (int i = 0; i < split1.length; i++) {
             int num = Integer.parseInt(split1[i]);
             if (num <= 0) {
@@ -35,6 +36,7 @@ public class Main1 {
             }
         }
 
+        // 转成 int 数组
         for (int i = 0; i < split2.length; i++) {
             int num = Integer.parseInt(split2[i]);
             if (num <= 0) {
@@ -48,6 +50,7 @@ public class Main1 {
             int a = Integer.parseInt(split1[i]);
             sum += a;
         }
+
         int[] num = new int[sum];
         int j = 0;
         for (int i = 0; i < split1.length; i++) {
