@@ -32,7 +32,12 @@ import java.util.Set;
  */
 public class 子数组按位或操作 {
     public static void main(String[] args) {
-
+        int[] arr1 = {0};
+        int[] arr2 = {1, 1, 2};
+        int[] arr3 = {1, 2, 4};
+        System.out.println(subarrayBitwiseORs(arr1));
+        System.out.println(subarrayBitwiseORs(arr2));
+        System.out.println(subarrayBitwiseORs(arr3));
     }
 
     // 动态规划法
