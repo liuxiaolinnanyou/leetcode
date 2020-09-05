@@ -9,7 +9,7 @@ public class 字符串的排列 {
     public static void main(String[] args) {
         String s = "abc";
         System.out.println(permutation(s));
-        System.out.println(permutation("ccc"));
+//        System.out.println(permutation("ccc"));
     }
 
     // 递归
