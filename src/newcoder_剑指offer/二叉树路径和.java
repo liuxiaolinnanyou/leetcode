@@ -1,8 +1,6 @@
 package newcoder_剑指offer;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 // 输入一颗二叉树的根节点和一个整数，打印出二叉树中结点值的和为输入整数的所有路径。
 // 路径定义为从树的根结点开始往下一直到叶结点所经过的结点形成一条路径。
@@ -27,7 +25,7 @@ public class 二叉树路径和 {
 //        ArrayList<ArrayList<Integer>> result2 = findPath(root.right, target);
         findPath(root.left, target);
         findPath(root.right, target);
-        list.remove(list.size() - 1);    // 去除最后一个
+        list.remove(list.size() - 1);    // 去除最后一个     回溯的思想
         return result;
     }
 }

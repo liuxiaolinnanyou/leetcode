@@ -53,7 +53,6 @@ public class 分割回文串 {
             if (!checkPalindrome(s, start, i)) {
                 continue;
             }
-
             path.addLast(s.substring(start, i + 1));
             backtracking(s, i + 1, len, path, res);
             path.removeLast();

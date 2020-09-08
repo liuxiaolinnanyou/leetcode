@@ -43,7 +43,7 @@ public class 整数反转 {
         return res;
     }
 
-    // 方法 2
+    // 方法 2       掌握
     public static int reverse2(int x) {
         long res = 0;
         while (x != 0) {
