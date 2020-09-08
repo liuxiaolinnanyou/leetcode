@@ -10,7 +10,7 @@ import java.util.Scanner;
  * 这样一直做下去，就会把不超过N的全部合数都筛掉，留下的就是不超过N的全部质数。
  */
 // 质数判断的题   还可以参见京东笔试题和贝壳中的多益网络的面试题
-public class 加i筛选法 {
+public class 质数筛选法 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
