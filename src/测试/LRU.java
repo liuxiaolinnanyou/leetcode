@@ -10,15 +10,14 @@ import java.util.HashMap;
  * 当所需的页面不在内存时，我们把它存储到内存中
  * 当队列满时，那么就从队列尾部移除一个结点，并将新结点添加到队列的前面
  */
-public class LRU<K,V> {
+public class LRU<K, V> {
     private final int MAX_CACHE_SIZE;
     private Entry first;
     private Entry last;
-
     private HashMap<K, Entry<K, V>> hashMap;
 
     /**
-     * @param cacheSize 初始的缓存的大小
+     * cacheSize 初始的缓存的大小
      */
     public LRU(int cacheSize) {
         this.MAX_CACHE_SIZE = cacheSize;
@@ -43,9 +42,6 @@ public class LRU<K,V> {
 
     /**
      * 获取key键对应的值
-     *
-     * @param key
-     * @return
      */
     public V get(K key) {
         Entry<K, V> entry = getEntry(key);
@@ -59,8 +55,6 @@ public class LRU<K,V> {
 
     /**
      * 将最近访问的entry移动到开头
-     *
-     * @param entry
      */
     private void moveToFirst(Entry entry) {
         /**
@@ -128,9 +122,6 @@ public class LRU<K,V> {
 
     /**
      * 存储键值的节点
-     *
-     * @param <K>
-     * @param <V>
      */
     class Entry<K, V> {
         public Entry pre;
@@ -139,4 +130,3 @@ public class LRU<K,V> {
         public V value;
     }
 }
-

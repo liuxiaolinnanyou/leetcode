@@ -12,7 +12,7 @@ package 笔试.锐明技术;
  */
 public class Main {
     public static void main(String[] args) {
-
+        System.out.println(findMaxMatchStringLength("fdsagrewqg", "fdsdgrewwg"));
     }
 
     public static int findMaxMatchStringLength(String str1, String str2) {
