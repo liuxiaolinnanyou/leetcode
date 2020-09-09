@@ -39,7 +39,6 @@ public class LRU<K, V> {
         hashMap.put(key, entry);
     }
 
-
     /**
      * 获取key键对应的值
      */
@@ -112,7 +111,6 @@ public class LRU<K, V> {
             } else {
                 last.next = null;
             }
-
         }
     }
 

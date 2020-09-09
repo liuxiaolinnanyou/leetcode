@@ -55,4 +55,3 @@ public class Main1 {
         return false;
     }
 }
-
