@@ -1,5 +1,7 @@
 package 五轮;
 
+import java.util.Arrays;
+
 /**
  * 给定一个仅包含 0 和 1 的二维二进制矩阵，找出只包含 1 的最大矩形，并返回其面积。
  * <p>
@@ -14,7 +16,13 @@ package 五轮;
  */
 public class 最大矩形 {
     public static void main(String[] args) {
-
+        char[][] arr = {
+                {'1', '0', '1', '0', '0'},
+                {'1', '0', '1', '1', '1'},
+                {'1', '1', '1', '1', '1'},
+                {'1', '0', '0', '1', '0'}
+        };
+        System.out.println(maximalRectangle(arr));
     }
 
     // 思路是 先算出每个节点的1xn的矩形,也可以理解为垂直高度,这个高度其实就是从上到下连续多少个1
@@ -40,6 +48,9 @@ public class 最大矩形 {
                     grid[i][j] = grid[i > 0 ? i - 1 : 0][j] + matrix[i][j] - '0';
                 }
             }
+        }
+        for (int[] arr : grid) {
+            System.out.println(Arrays.toString(arr));
         }
 
         for (int i = 0; i < x; i++) {

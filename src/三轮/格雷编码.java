@@ -30,11 +30,11 @@ import java.util.List;
  */
 public class 格雷编码 {
     public static void main(String[] args) {
-
+        System.out.println(grayCode(2));
     }
 
     // 设 n 阶格雷码集合为 G(n)，则 G(n+1) 阶格雷码为：
-    // 给 G(n) 阶格雷码每个元素二进制形式前面添加 00，得到 G'(n)
+    // 给 G(n) 阶格雷码每个元素二进制形式前面添加 0，得到 G'(n)
     // 设 G(n) 集合倒序（镜像）为 R(n)，给 R(n) 每个元素二进制形式前面添加 1，得到 R'(n)
     // G(n+1) = G'(n) ∪ R'(n)拼接两个集合即可得到下一阶格雷码。
     // 根据以上规律，可从 0 阶格雷码推导致任何阶格雷码。

@@ -49,20 +49,4 @@ public class 只出现一次的数字2 {
         }
         return -1;            // 这句不会执行
     }
-
-    // 数学推导    有问题
-//    public static int singlnNumber2(int[] nums) {
-//        HashSet<Integer> set = new HashSet<>();
-//        int sum = 0;
-//        for (int i = 0; i < nums.length; i++) {
-//            set.add(nums[i]);
-//            sum += nums[i];
-//        }
-//        int sumMul = 0;
-//        for (int n : set) {
-//            sumMul += n;
-//        }
-//        sumMul = sumMul * 3;
-//        return (sumMul - sum) / 2;
-//    }
 }
