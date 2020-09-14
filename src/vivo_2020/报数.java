@@ -17,9 +17,10 @@ import java.util.Arrays;
  */
 public class 报数 {
     public static void main(String[] args) {
-        int[] arr = {6, 3};
+        int[] arr = {8, 3};
         System.out.println(solution(arr));
         System.out.println(solution2(arr));
+        System.out.println(solution3(arr));
     }
 
     // 方法 1
@@ -74,5 +75,24 @@ public class 报数 {
             arr.remove(i);
         }
         return sb.delete(sb.length() - 1, sb.length()).toString();
+    }
+
+
+    // 方法 3
+    public static String solution3(int[] input) {
+        int n = input[0];
+        int m = input[1];
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int i = 1; i <= n; i++) {
+            list.add(i);
+        }
+        StringBuilder sb = new StringBuilder();
+        int idx = 0;
+        while (n > 0) {
+            idx = (idx + m - 1) % n;
+            sb.append(list.remove(idx)).append(" ");
+            n--;
+        }
+        return sb.deleteCharAt(sb.length() - 1).toString();
     }
 }
