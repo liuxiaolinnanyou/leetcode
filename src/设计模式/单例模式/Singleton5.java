@@ -3,7 +3,7 @@ package 设计模式.单例模式;
 // 静态内部类
 // 既要懒汉式加载，又要线程安全：静态内部类
 public class Singleton5 {
-    private static Singleton5 singleton5;
+//    private static Singleton5 singleton5;
 
     private Singleton5() {
     }

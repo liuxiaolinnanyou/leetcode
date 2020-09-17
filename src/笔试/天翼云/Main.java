@@ -1,6 +1,5 @@
 package 笔试.天翼云;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
