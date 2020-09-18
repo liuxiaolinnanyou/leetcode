@@ -18,7 +18,13 @@ package 笔试.伴鱼;
  */
 public class Main1 {
     public static void main(String[] args) {
-
+        System.out.println(baseNeg2(2));
+        System.out.println(baseNeg2(3));
+        System.out.println(baseNeg2(4));
+        System.out.println("------------");
+        System.out.println(baseNeg(2));
+        System.out.println(baseNeg(3));
+        System.out.println(baseNeg(4));
     }
 
     public static String baseNeg2(int N) {
