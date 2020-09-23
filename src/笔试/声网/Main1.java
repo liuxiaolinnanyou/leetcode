@@ -22,7 +22,7 @@ public class Main1 {
         }
 
         char[] chars = s.toCharArray();
-        int[] arr = new int[256];
+        int[] arr = new int[128];
         for (int i = 0; i < chars.length; i++) {
             arr[chars[i]]++;
         }
