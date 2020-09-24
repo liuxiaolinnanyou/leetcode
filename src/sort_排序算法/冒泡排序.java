@@ -1,10 +1,6 @@
 package sort_排序算法;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class 冒泡排序 {
     public static void main(String[] args) {
 //        // 基本数据类型的数组转换成集合,会将整个数组当作一个对象转换，将数组转换成集合,数组必须是引用数据类型。
