@@ -58,7 +58,7 @@ public class 组合 {
             res.add(new ArrayList<>(path));
             return;
         }
-        // // 只有这里 i <= n - (k - path.size()) + 1 与参考代码 1 不同
+        // 只有这里 i <= n - (k - path.size()) + 1 与参考代码 1 不同
         for (int i = index; i <= n - (k - path.size()) + 1; i++) {
             path.addLast(i);
             dfs(n, k, i + 1, path, res);

@@ -1,9 +1,5 @@
 package 三轮;
 
-import com.sun.org.apache.bcel.internal.generic.ReturnInstruction;
-
-import java.util.List;
-
 /**
  * 如果有两个中间节点，返回第二个中间节点
  */
