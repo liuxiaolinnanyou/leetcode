@@ -31,6 +31,7 @@ import java.util.List;
 public class 格雷编码 {
     public static void main(String[] args) {
         System.out.println(grayCode(2));
+        System.out.println(grayCode(4));
     }
 
     // 设 n 阶格雷码集合为 G(n)，则 G(n+1) 阶格雷码为：
