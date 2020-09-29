@@ -1,7 +1,7 @@
 package 笔试.建信金融科技;
 
 /**
- * 二位数组查找第 k 小的元素。
+ * 二维数组查找第 k 小的元素。
  * 输入：
  * [
  * [1,5,9],
@@ -13,7 +13,7 @@ package 笔试.建信金融科技;
  * 输出：
  * 13
  */
-public class Main {
+public class 二维排序数组中的第k小元素 {
     public static void main(String[] args) {
         int[][] arr = {{1, 5, 9}, {10, 11, 13}, {12, 13, 15}};
         int[][] arr1 = {{1, 3, 6}, {2, 4, 7}, {5, 8, 9}};
