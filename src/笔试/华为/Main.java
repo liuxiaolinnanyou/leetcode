@@ -1,6 +1,5 @@
 package 笔试.华为;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
