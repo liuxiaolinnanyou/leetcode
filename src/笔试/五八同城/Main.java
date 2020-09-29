@@ -1,6 +1,5 @@
 package 笔试.五八同城;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
