@@ -1,9 +1,5 @@
 package 笔试.招银网络科技;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class 判断链表是否有环 {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(1);

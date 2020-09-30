@@ -63,7 +63,8 @@ package 笔试.奇虎360;
  * 说明：{1,2,3,4} {2,3,4,1} {3,2,1,4} {2,1,4,3}
  */
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Scanner;
 
 public class Main1 {
     public static void main(String[] args) {

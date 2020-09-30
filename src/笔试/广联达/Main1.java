@@ -1,6 +1,7 @@
 package 笔试.广联达;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * 元素平衡

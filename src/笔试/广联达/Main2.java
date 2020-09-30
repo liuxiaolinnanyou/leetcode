@@ -1,6 +1,6 @@
 package 笔试.广联达;
 
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * 你购买了一个机器人，他现在剩下C单位电量，你现在想让他做一些动作愉悦自己，他可以做n种动作，每种动作最多做一次，因为你觉得让
