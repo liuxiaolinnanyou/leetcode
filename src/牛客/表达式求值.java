@@ -1,11 +1,5 @@
 package 牛客;
 
-/**
- * @author Lxl
- * @version 1.0
- * @date 2020/6/14 9:33
- */
-
 import java.util.Scanner;
 
 /**

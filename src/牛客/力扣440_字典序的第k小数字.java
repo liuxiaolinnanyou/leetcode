@@ -1,11 +1,5 @@
 package 牛客;
 
-/**
- * @author Lxl
- * @version 1.0
- * @date 2020/6/18 10:34
- */
-
 import java.util.Arrays;
 
 /**
