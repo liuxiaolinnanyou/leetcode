@@ -1,6 +1,9 @@
 package 面试宝典_字符串;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * 删除字符串中重复的字符 例如："good"变为"god"。
