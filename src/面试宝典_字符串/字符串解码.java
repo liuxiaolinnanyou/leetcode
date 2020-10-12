@@ -23,6 +23,9 @@ import java.util.LinkedList;
 public class 字符串解码 {
     public static void main(String[] args) {
         System.out.println(decodeString("3[a]2[bc]"));
+        System.out.println(decodeString("3[a2[c]]"));
+        System.out.println(decodeString("2[abc]3[cd]ef"));
+        System.out.println(decodeString("abc3[cd]xyz"));
     }
 
     public static String decodeString(String s) {
@@ -31,6 +34,7 @@ public class 字符串解码 {
         LinkedList<Integer> stack_multi = new LinkedList<>();
         LinkedList<String> stack_res = new LinkedList<>();
         for (Character c : s.toCharArray()) {
+            // 分四种情况来判断
             if (c == '[') {
                 stack_multi.addLast(multi);
                 stack_res.addLast(res.toString());
