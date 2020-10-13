@@ -43,7 +43,9 @@ public class 全排列 {
     public static void backtrack(int n, ArrayList<Integer> output, List<List<Integer>> res, int first) {
         // 所有数都填完了
         if (first == n) {
-            res.add(new ArrayList<Integer>(output));
+//            res.add(new ArrayList<Integer>(output));   // 这样写正确
+            res.add((List<Integer>) output.clone());     // 这样写正确
+//            res.add(output);      // 这样写是错误的,类比数组，output是一个引用，因此所有的元素都一样
         }
         for (int i = first; i < n; i++) {
             // 动态维护数组
