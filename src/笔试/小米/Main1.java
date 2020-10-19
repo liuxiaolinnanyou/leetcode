@@ -26,6 +26,8 @@ public class Main1 {
             return;
         }
         System.out.println(exist(chars, s));
+        System.out.println(exist(chars, "BCD"));
+        System.out.println(exist(chars, "BFS"));
     }
 
     public static boolean exist(char[][] board, String word) {
