@@ -28,7 +28,6 @@ public class Main1 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        int[] arr = new int[n];
 
         LinkedList<Integer> his1 = new LinkedList<>();
         LinkedList<Integer> his2 = new LinkedList<>();
