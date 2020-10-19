@@ -25,8 +25,8 @@ public class 二维排序数组中的第k小元素 {
     public static int kthSmallest(int[][] matrix, int m) {
         // write code here
         int n = matrix.length - 1;
-        int left = matrix[0][0];
-        int right = matrix[n][n];
+        int left = matrix[0][0];     // 左边界
+        int right = matrix[n][n];    // 右边界
         while (left < right) {
             int mid = left + (right - left) / 2;
             if (checkNum(n, m, mid, matrix)) {
