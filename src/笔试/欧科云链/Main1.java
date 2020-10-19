@@ -8,7 +8,15 @@ package 笔试.欧科云链;
  */
 public class Main1 {
     public static void main(String[] args) {
+        System.out.println(isPowerOfTwo(2));
+        System.out.println(isPowerOfTwo2(2));
+        System.out.println("-----------------");
+        System.out.println(isPowerOfTwo(8));
+        System.out.println(isPowerOfTwo2(8));
+        System.out.println("-----------------");
 
+        System.out.println(isPowerOfTwo(16));
+        System.out.println(isPowerOfTwo2(15));
     }
 
     public static boolean isPowerOfTwo(int n) {
@@ -19,6 +27,16 @@ public class Main1 {
             if (string.charAt(i) == '1') {
                 count++;
             }
+        }
+        return count == 1 ? true : false;
+    }
+
+    public static boolean isPowerOfTwo2(int n) {
+        // write code here
+        int count = 0;
+        while (n != 0) {
+            n = n & (n - 1);
+            count++;
         }
         return count == 1 ? true : false;
     }
