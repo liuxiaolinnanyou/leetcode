@@ -1,48 +1,5 @@
 package 笔试.奇虎360;
 
-//import java.util.ArrayList;
-//import java.util.List;
-//import java.util.Scanner;
-//
-//public class Main1 {       // 会超时
-//    public static void main(String[] args) {
-//        Scanner sc = new Scanner(System.in);
-//        int N = sc.nextInt();
-//        int M = sc.nextInt();
-//        int[] nums = new int[N];
-//        for (int i = 0; i < N; i++) {
-//            nums[i] = i + 1;
-//        }
-//
-//        List<Integer> list = new ArrayList<>();
-//        for (int i = 0; i < M; i++) {
-//            list.add(sc.nextInt());
-//        }
-//        for (int k : list) {
-//            if (k == 1) {
-//                int s = nums[0];
-//                for (int i = 1; i < nums.length; i++) {
-//                    nums[i - 1] = nums[i];
-//                }
-//                nums[nums.length - 1] = s;
-//            }
-//            if (k == 2) {
-//                for (int i = 1; i < nums.length; i += 2) {
-//                    int temp = nums[i - 1];
-//                    nums[i - 1] = nums[i];
-//                    nums[i] = temp;
-//                }
-//            }
-//        }
-//        StringBuffer sb = new StringBuffer();
-//        for (int a : nums) {
-//            sb.append(a + " ");
-//        }
-//        System.out.println(sb);
-//    }
-//}
-
-
 /**
  * 给定一个 1 到 n 的排列 P1 到 Pn， n为整数，初始时 Pi=i (1 <= i <= n)，现在要对排列进行 m 次操作，每次操作为以下两种中的一种：
  * 1.将排列的第1个数移到末尾
