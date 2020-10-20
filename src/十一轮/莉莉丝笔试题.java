@@ -72,10 +72,9 @@ public class 莉莉丝笔试题 {
             return;
         }
         int index = 0;
-        int temp;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] != 0) {
-                temp = arr[i];
+                int temp = arr[i];
                 arr[i] = arr[index];
                 arr[index] = temp;
                 index++;
