@@ -71,14 +71,14 @@ public class 莉莉丝笔试题 {
         if (arr == null || arr.length == 0) {
             return;
         }
-        int k = 0;
+        int index = 0;
         int temp;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] != 0) {
                 temp = arr[i];
-                arr[i] = arr[k];
-                arr[k] = temp;
-                k++;
+                arr[i] = arr[index];
+                arr[index] = temp;
+                index++;
             }
         }
     }
