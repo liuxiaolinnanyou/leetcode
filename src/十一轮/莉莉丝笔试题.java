@@ -48,25 +48,26 @@ public class 莉莉丝笔试题 {
     }
 
     // 将所有的 0 移至数组的末尾    (代码有问题，不能解决有连续 0 的问题)
-    public static void solution1(int[] arr) {
-        if (arr == null || arr.length == 0) {
-            return;
-        }
-        int m = arr.length - 1;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == 0) {
-                int temp = arr[i];
-                int j = i;
-                while (j < m) {
-                    arr[j] = arr[j + 1];
-                    j++;
-                }
-                m = j - 1;
-                arr[j] = temp;
-            }
-        }
-    }
+//    public static void solution1(int[] arr) {
+//        if (arr == null || arr.length == 0) {
+//            return;
+//        }
+//        int m = arr.length - 1;
+//        for (int i = 0; i < arr.length; i++) {
+//            if (arr[i] == 0) {
+//                int temp = arr[i];
+//                int j = i;
+//                while (j < m) {
+//                    arr[j] = arr[j + 1];
+//                    j++;
+//                }
+//                m = j - 1;
+//                arr[j] = temp;
+//            }
+//        }
+//    }
 
+    // 思路是：将不为 0 的数加到数组的最前面   基于交换来实现
     public static void solution2(int[] arr) {
         if (arr == null || arr.length == 0) {
             return;
