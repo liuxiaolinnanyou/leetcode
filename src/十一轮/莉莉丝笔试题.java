@@ -26,6 +26,10 @@ public class 莉莉丝笔试题 {
         System.out.println(Arrays.toString(arr3));
         solution2(arr3);
         System.out.println(Arrays.toString(arr3));
+
+//        System.out.println(Arrays.toString(arr3));
+//        solution3(arr3);
+//        System.out.println(Arrays.toString(arr3));
     }
 
     public static void solution(int[] arr) {
@@ -82,4 +86,23 @@ public class 莉莉丝笔试题 {
             }
         }
     }
+
+    // 不对  交换了非 0 元素的位置
+//    public static void solution3(int[] arr) {
+//        if (arr == null || arr.length == 0) {
+//            return;
+//        }
+//        int i = 0;
+//        int j = arr.length - 1;
+//        while (i < j) {
+//            if (arr[i] != 0) {
+//                i++;
+//            } else {
+//                int temp = arr[i];
+//                arr[i] = arr[j];
+//                arr[j] = temp;
+//                j--;
+//            }
+//        }
+//    }
 }
