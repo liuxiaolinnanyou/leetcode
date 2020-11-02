@@ -17,6 +17,11 @@ public class x的平方根 {
         System.out.println(result);
         System.out.println(result2);
         System.out.println(result3);
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println("---------------");
+        System.out.println(mySqrt(2147395599));
+        System.out.println(mySqrt1(2147395599));   // 使用 int 时在计算过程中超出 Integer 的范围时会转变为负数
+        System.out.println("---------------");
     }
 
 
@@ -41,5 +46,22 @@ public class x的平方根 {
         }
         // 因为一定存在，因此无需后处理
         return (int) left;
+    }
+
+    // 错误示例
+    public static int mySqrt1(int x) {
+        int left = 0;
+        int right = x / 2 + 1;
+        while (left < right) {
+//            long mid = left + (right - left + 1) / 2;
+            int mid = (left + right + 1) >>> 1;
+            long square = mid * mid;
+            if (square > x) {
+                right = mid - 1;
+            } else {
+                left = mid;
+            }
+        }
+        return left;
     }
 }
