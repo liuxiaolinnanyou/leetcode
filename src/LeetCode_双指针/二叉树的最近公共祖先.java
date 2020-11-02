@@ -22,7 +22,7 @@ public class 二叉树的最近公共祖先 {
     // 递归
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         if (root == null || root == p || root == q) {
-            return root;
+            return root;      // 递归出口
         }
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
