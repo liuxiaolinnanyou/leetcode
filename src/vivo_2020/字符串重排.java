@@ -14,6 +14,10 @@ public class 字符串重排 {
         System.out.println(orderString("1923dha0"));
     }
 
+    // 未验证正确性
+    // 0-9   48-57
+    // a-z   97-122
+    // A-Z   65-90
     public static String orderString(String given_str) {
         return "";
     }
