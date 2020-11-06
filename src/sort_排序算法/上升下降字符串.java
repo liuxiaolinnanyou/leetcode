@@ -61,7 +61,7 @@ public class 上升下降字符串 {
                 if (count[i] == 0) {   // 该字母不存在
                     continue;
                 }
-                res.append((char) (i + 'a'));
+                res.append((char) (i + 'a'));    // 注意这里的转 char 需要对整体 (i + 'a') 进行转换
                 count[i] -= 1;
             }
             for (int i = 25; i >= 0; i--) {
