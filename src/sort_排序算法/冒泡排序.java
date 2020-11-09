@@ -25,8 +25,8 @@ public class 冒泡排序 {
 ////        list.add(12);    // java.lang.UnsupportedOperationException     集合的长度不能改变
 //        System.out.println(list.size());
 //        System.out.println(list);
-
-
+//
+//
 //        String [] arr = {"asd","asd","asdf"};
 //        List<String> list = Arrays.asList(arr);
 //        list.add("石原里美");     // UnsupportedOperationException
