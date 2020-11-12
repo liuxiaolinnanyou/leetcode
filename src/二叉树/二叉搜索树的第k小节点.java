@@ -1,5 +1,7 @@
 package 二叉树;
 
+import sun.reflect.generics.tree.Tree;
+
 import java.util.Stack;
 
 /**
@@ -7,7 +9,21 @@ import java.util.Stack;
  */
 public class 二叉搜索树的第k小节点 {
     public static void main(String[] args) {
+        TreeNode root = new TreeNode(5);
+        TreeNode t1 = new TreeNode(3);
+        TreeNode t2 = new TreeNode(7);
+        TreeNode t3 = new TreeNode(2);
+        TreeNode t4 = new TreeNode(4);
+        TreeNode t5 = new TreeNode(6);
+        TreeNode t6 = new TreeNode(8);
 
+        root.left = t1;
+        root.right = t2;
+        t1.left = t3;
+        t1.right = t4;
+        t2.left = t5;
+        t2.right = t6;
+        System.out.println(kthNode(root, 3));
     }
 
     public static TreeNode kthNode(TreeNode Root, int k) {
@@ -41,5 +57,12 @@ class TreeNode {
 
     public TreeNode(int val) {
         this.val = val;
+    }
+
+    @Override
+    public String toString() {
+        return "TreeNode{" +
+                "val=" + val +
+                '}';
     }
 }

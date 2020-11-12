@@ -21,23 +21,23 @@ public class 求第k层的节点个数 {
 //        }
 //        return getKLevelSize(root.left, k - 1) + getKLevelSize(root.right, k - 1);
 
-        Queue<TreeNode> q = new LinkedList<>();
-        TreeNode p = root;
-        q.add(p);
+        Queue<TreeNode> queue = new LinkedList<>();
+        TreeNode res = root;
+        queue.add(res);
         int lavel = 1;
-        while (!q.isEmpty()) {
-            int size = q.size();
+        while (!queue.isEmpty()) {
+            int size = queue.size();
             if (lavel == k) {
                 return size;
             }
             lavel += 1;
             for (int i = 0; i < size; i++) {
-                TreeNode t = q.poll();
+                TreeNode t = queue.poll();
                 if (t.left != null) {
-                    q.add(t.left);
+                    queue.add(t.left);
                 }
                 if (t.right != null) {
-                    q.add(t.right);
+                    queue.add(t.right);
                 }
             }
         }
