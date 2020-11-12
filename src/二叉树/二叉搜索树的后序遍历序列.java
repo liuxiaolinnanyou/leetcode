@@ -13,11 +13,30 @@ public class 二叉搜索树的后序遍历序列 {
     public static void main(String[] args) {
         int[] arr = {3, 4, 9, 5, 12, 11, 10};
         System.out.println(VerifySequenceOfBST(arr));
+        System.out.println("----------------------");
+
+        int[] arr1 = {1, 6, 3, 2, 5};
+        System.out.println(VerifySequenceOfBST(arr1));    // false
+        System.out.println("----------------------");
+
+        int[] arr2 = {1, 3, 2, 6, 5};
+        System.out.println(VerifySequenceOfBST(arr2));    // true
+        System.out.println("----------------------");
+
+        int[] arr3 = {4, 8, 6, 12, 16, 14, 10};
+        System.out.println(VerifySequenceOfBST(arr3));
+        System.out.println("----------------------");
+
+        int[] arr4 = {};
+        System.out.println(VerifySequenceOfBST(arr4));
     }
 
     public static boolean VerifySequenceOfBST(int[] sequence) {
-        if (sequence == null || sequence.length == 0) {
+        if (sequence == null) {
             return false;
+        }
+        if (sequence.length == 0) {
+            return true;
         }
         return helpVerifySequenceOfBST(sequence, 0, sequence.length - 1);
     }
