@@ -15,7 +15,13 @@ package 三轮;
  */
 public class 删除排序数组中的重复项2 {
     public static void main(String[] args) {
-
+        int[] arr1 = {1, 1, 1, 2, 2, 3};
+        int[] arr2 = {0, 0, 1, 1, 1, 1, 2, 3, 3};
+        System.out.println(removeDuplicates(arr1));
+        System.out.println(removeDuplicates(arr2));
+        System.out.println("--------------------");
+        System.out.println(removeDuplicates2(arr1));
+        System.out.println(removeDuplicates2(arr2));
     }
 
     public static int removeDuplicates(int[] nums) {
