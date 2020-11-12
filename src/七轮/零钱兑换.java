@@ -18,46 +18,21 @@ import java.util.Arrays;
  */
 public class 零钱兑换 {
     public static void main(String[] args) {
-
+        int[] arr1 = {1, 2, 5};
+        int[] arr2 = {2};
+        System.out.println(coinChange(arr1, 11));
+        System.out.println(coinChange(arr2, 3));
     }
-
-    // 递归
-    static int res = Integer.MAX_VALUE;
-
-    public static int coinChange(int[] coins, int amount) {
-        if (coins.length == 0) {
-            return -1;
-        }
-        findWay(coins, amount, 0);
-        // 如果没有任何一种硬币组合能组成总金额，返回 -1。
-        if (res == Integer.MAX_VALUE) {
-            return -1;
-        }
-        return res;
-    }
-
-    private static void findWay(int[] coins, int amount, int count) {
-        if (amount < 0) {
-            return;
-        }
-        if (amount == 0) {
-            res = Math.min(res, count);
-        }
-        for (int i = 0; i < coins.length; i++) {
-            findWay(coins, amount - coins[i], count + 1);
-        }
-    }
-
 
     // 动态规划
-    public static int coinChange2(int[] coins, int amount) {
+    public static int coinChange(int[] coins, int amount) {
         // 自底向上的动态规划
         if (coins.length == 0) {
             return -1;
         }
-        // memo[n]的值： 表示的凑成总金额为n所需的最少的硬币个数
+        // memo[n]的值： 表示的凑成总金额为 n 所需的最少的硬币个数
         int[] memo = new int[amount + 1];
-        // 给memo赋初值，最多的硬币数就是全部使用面值1的硬币进行换
+        // 给 memo 赋初值，最多的硬币数就是全部使用面值1的硬币进行换
         // amount + 1 是不可能达到的换取数量，于是使用其进行填充
         Arrays.fill(memo, amount + 1);
         memo[0] = 0;
@@ -65,7 +40,7 @@ public class 零钱兑换 {
             for (int j = 0; j < coins.length; j++) {
                 if (i - coins[j] >= 0) {
                     // memo[i]有两种实现的方式，
-                    // 一种是包含当前的coins[i],那么剩余钱就是 i-coins[i],这种操作要兑换的硬币数是 memo[i-coins[j]] + 1
+                    // 一种是包含当前的 coins[i],那么剩余钱就是 i-coins[i],这种操作要兑换的硬币数是 memo[i-coins[j]] + 1
                     // 另一种就是不包含，要兑换的硬币数是memo[i]
                     memo[i] = Math.min(memo[i], memo[i - coins[j]] + 1);
                 }
