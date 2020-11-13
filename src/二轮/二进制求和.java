@@ -19,6 +19,7 @@ public class 二进制求和 {
     public static void main(String[] args) {
         System.out.println(5 + '0');
         System.out.println('0' + 5);
+        System.out.println(Integer.parseInt("1011", 2));     // 将字符串按二进制转换
     }
 
     public static String addBinary(String a, String b) {
