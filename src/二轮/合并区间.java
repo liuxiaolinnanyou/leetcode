@@ -16,7 +16,8 @@ import java.util.Comparator;
  */
 public class 合并区间 {
     public static void main(String[] args) {
-
+        int[][] arr1 = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+        int[][] arr2 = {{1, 4}, {4, 5}};
     }
 
     public static int[][] merge(int[][] intervals) {
