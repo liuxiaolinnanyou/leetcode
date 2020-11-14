@@ -1,8 +1,6 @@
 package 八轮;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Arrays;
 
 /**
  * 给你一个数组 nums ，数组中有 2n 个元素，按 [x1,x2,...,xn,y1,y2,...,yn] 的格式排列。
@@ -25,7 +23,12 @@ import java.util.List;
  */
 public class 重新排列数组 {
     public static void main(String[] args) {
-
+        int[] arr1 = {2, 5, 1, 3, 4, 7};
+        int[] arr2 = {1, 2, 3, 4, 4, 3, 2, 1};
+        int[] arr3 = {1, 1, 2, 2};
+        System.out.println(Arrays.toString(shuffle(arr1, 3)));
+        System.out.println(Arrays.toString(shuffle(arr2, 4)));
+        System.out.println(Arrays.toString(shuffle(arr3, 2)));
     }
 
     // 新数组中交叉放入值

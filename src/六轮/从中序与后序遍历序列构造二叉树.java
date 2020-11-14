@@ -24,7 +24,7 @@ public class 从中序与后序遍历序列构造二叉树 {
 
     private static TreeNode helper(int[] in, int[] post) {
         if (in.length == 0) {
-            return null;
+            return null;     // 递归出口
         }
         // 根据后序数组的最后一个元素，创建根节点
         TreeNode root = new TreeNode(post[post.length - 1]);

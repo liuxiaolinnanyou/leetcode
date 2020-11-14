@@ -23,7 +23,7 @@ public class 前中序遍历构建二叉树 {
 
     public static TreeNode reConstructBinaryTree(int[] pre, int[] in) {
         if (pre.length == 0 || in.length == 0) {
-            return null;
+            return null;            // 递归出口
         }
         TreeNode root = new TreeNode(pre[0]);
         // 在中序中找到前序的根
