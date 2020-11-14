@@ -21,6 +21,7 @@ public class 合并区间 {
     }
 
     public static int[][] merge(int[][] intervals) {
+//        Arrays.sort(intervals, (o1, o2) -> o1[0] - o2[0]);
         Arrays.sort(intervals, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {

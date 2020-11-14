@@ -34,6 +34,9 @@ public class 简化路径 {
     public static void main(String[] args) {
         System.out.println(simplifyPath("/home//foo/"));
         System.out.println(simplifyPath2("/home//foo/"));
+        System.out.println("--------------------------");
+        System.out.println(simplifyPath("/a//b////c/d//././/.."));
+        System.out.println(simplifyPath2("/a//b////c/d//././/.."));
     }
 
     // 方法 1

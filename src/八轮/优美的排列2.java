@@ -34,12 +34,12 @@ public class 优美的排列2 {
     public static int[] constructArray(int n, int k) {
         int[] res = new int[n];
         for (int i = 0; i < n; i++) {
-            res[i] = i + 1;         // 产生 1-n
+            res[i] = i + 1;         // 产生 1 - n
         }
         if (k == 1) {
-            return res;             // k==1直接返回
+            return res;             // k == 1 直接返回
         }
-        // k != 1就要翻转k - 1次，每次翻转保留前m个数
+        // k != 1就要翻转k - 1次，每次翻转保留前 m 个数
         for (int m = 1; m < k; m++) {
             reverse(res, m, n - 1);
         }
