@@ -71,7 +71,6 @@ public class 括号生成 {
             res.add(curStr);
             return;
         }
-
         if (left > 0) {                  // 如果左括号还剩余的话，可以拼接左括号
             dfs(left - 1, right, curStr + "(", res);
         }

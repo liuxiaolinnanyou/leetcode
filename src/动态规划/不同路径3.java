@@ -77,19 +77,19 @@ public class 不同路径3 {
     // 深度优先搜索
     private static int dfs(int x, int y, int stepNum, int[][] grid) {
         // 排除越界的情况 和 遇到障碍的情况
-        if (x < 0 || x >= grid[0].length || y < 0 || y >= grid.length || grid[y][x] == -1) {
+        if (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length || grid[x][y] == -1) {
             return 0;
         }
-        if (grid[y][x] == 2) {
+        if (grid[x][y] == 2) {
             return stepNum == 0 ? 1 : 0;
         }
-        grid[y][x] = -1;  // 已走过的标记为障碍
+        grid[x][y] = -1;  // 已走过的标记为障碍
         int res = 0;
         res += dfs(x - 1, y, stepNum - 1, grid);
         res += dfs(x + 1, y, stepNum - 1, grid);
         res += dfs(x, y - 1, stepNum - 1, grid);
         res += dfs(x, y + 1, stepNum - 1, grid);
-        grid[y][x] = 0;  // dfs遍历完该位置为起始位置的情况后，置零，以不影响后面的dfs
+        grid[x][y] = 0;  // dfs遍历完该位置为起始位置的情况后，置零，以不影响后面的dfs
         return res;
     }
 }

@@ -40,7 +40,8 @@ import java.util.Set;
 public class 矩阵置零 {
     // 原地更新矩阵，也就是空间复杂度要求时 O(1)。
     public static void main(String[] args) {
-
+        int[][] arr1 = {{1, 0, 1}, {0, 0, 0}, {1, 0, 1}};
+        int[][] arr2 = {{0, 1, 2, 0}, {3, 4, 5, 2}, {1, 3, 1, 5}};
     }
 
     // 两遍扫 matrix ,第一遍用集合记录哪些行,哪些列有 0 ;第二遍置 0

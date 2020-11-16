@@ -26,7 +26,7 @@ public class 颜色分类 {
         System.out.println(Arrays.toString(arr));
     }
 
-    // 自己写的
+    // 自己写的    类似桶排序
     public static void sortColors(int[] nums) {
         int[] arr = new int[3];
         for (int num : nums) {
