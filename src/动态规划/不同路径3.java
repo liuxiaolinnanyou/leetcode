@@ -56,13 +56,13 @@ public class 不同路径3 {
     // 设定一个最大步长，并先遍历二维数组，统计最大步长的数值，即 0 的个数 + 1(当到达终止位置时，grid[i][j] == 2，也算步长 + 1)
     // 加入回溯的思想，在每次对当前位置dfs后(标记grid[y][x] = -1，下次不能走了)，将此位置重置回grid[y][x] = 0
     public static int uniquePathsIII(int[][] grid) {
-        int startX = 0, startY = 0, stepNum = 1;  // 当grid[i][j] == 2, stepNum++, 这里直接初始化为1
+        int startX = 0, startY = 0, stepNum = 1;  // 当grid[i][j] == 2, stepNum++, 这里直接初始化为 1
         // 遍历获取起始位置和统计总步数
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
                 if (grid[i][j] == 1) {
-                    startY = i;
-                    startX = j;
+                    startX = i;
+                    startY = j;
                     continue;
                 }
                 if (grid[i][j] == 0) {
