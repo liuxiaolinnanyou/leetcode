@@ -33,7 +33,7 @@ public class 回文素数 {
     // 相信大家已经发现了，当数字大于 11 的数的数字个数为偶数时，其回文数都不是素数，
     // 我们可以直接跳过这些数字，因为 11 必定是其质因数。
     public static int primePalindrome(int N) {
-        int[] check = {2, 2, 2, 3, 5, 5, 7, 7, 11, 11, 11, 11};
+        int[] check = {2, 2, 2, 3, 5, 5, 7, 7, 11, 11, 11, 11};     // 从 0 开始
         if (N < check.length && check[N] > 0) {
             return check[N];
         }

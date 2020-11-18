@@ -50,8 +50,10 @@ public class Hw68_成绩排序 {
         while (sc.hasNext()) {
             int n = sc.nextInt();          // 排序人数
             int order = sc.nextInt();      // 排序方式
+
             ArrayList<Integer> list = new ArrayList();
             LinkedHashMap<String, Integer> map = new LinkedHashMap<>();
+
             for (int i = 0; i < n; i++) {
                 String name = sc.next();
                 int score = sc.nextInt();

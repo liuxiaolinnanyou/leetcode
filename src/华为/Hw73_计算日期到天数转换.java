@@ -34,7 +34,7 @@ public class Hw73_计算日期到天数转换 {
     public static int converDateToDay(int year, int month, int day) {
         int[] Day = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
-        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {       // 判断闰年
             Day[1] = 29;
         }
         if (year <= 0 || month <= 0 || month > 12 || day <= 0 || day > Day[month - 1]) {

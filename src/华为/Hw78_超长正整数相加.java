@@ -44,7 +44,7 @@ public class Hw78_超长正整数相加 {
     public static String addLongInteger2(String str1, String str2) {
         int lenA = str1.length();
         int lenB = str2.length();
-        int lenS = Math.max(lenA, lenB);
+        int lenS = Math.max(lenA, lenB);     // 存放两个字符串长度的较大值
 
         // arrS保存最终生成的结果
         int[] arrA = new int[lenS];

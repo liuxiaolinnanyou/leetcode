@@ -29,7 +29,10 @@ package 四轮;
  */
 public class 删除回文子序列 {
     public static void main(String[] args) {
-
+        System.out.println(removePalindromeSub("ababa"));
+        System.out.println(removePalindromeSub("abb"));
+        System.out.println(removePalindromeSub("baabb"));
+        System.out.println(removePalindromeSub(""));
     }
 
     // 脑经急转弯
@@ -37,7 +40,7 @@ public class 删除回文子序列 {
     // 也就是顶多删两次，一次全删掉"a"，一次全删掉"b"。
     // 如果是回文字符串，就删一次。
     // 空字符串就0次。
-    public int removePalindromeSub(String s) {
+    public static int removePalindromeSub(String s) {
         if ("".equals(s)) {
             return 0;
         }

@@ -1,5 +1,7 @@
 package 十二轮;
 
+import sun.print.DialogOwner;
+
 /**
  * 给你一个正方形矩阵 mat，请你返回矩阵对角线元素的和。
  * 请你返回在矩阵主对角线上的元素和副对角线上且不在主对角线上元素的和。
@@ -27,7 +29,16 @@ package 十二轮;
  */
 public class 矩阵对角线元素的和 {
     public static void main(String[] args) {
-
+        int[][] arr1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+        int[][] arr2 = {{1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}};
+        int[][] arr3 = {{5}};
+        System.out.println(diagonalSum(arr1));
+        System.out.println(diagonalSum(arr2));
+        System.out.println(diagonalSum(arr3));
+        System.out.println("---------------");
+        System.out.println(diagonalSum2(arr1));
+        System.out.println(diagonalSum2(arr2));
+        System.out.println(diagonalSum2(arr3));
     }
 
     // 自己写的
