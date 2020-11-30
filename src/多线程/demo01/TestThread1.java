@@ -1,4 +1,4 @@
-package 多线程;
+package 多线程.demo01;
 
 // 创建线程方式一：继承Thread类，重写run()方法，调用start()开启线程
 // 注意：

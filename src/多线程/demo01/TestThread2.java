@@ -1,4 +1,4 @@
-package 多线程;
+package 多线程.demo01;
 
 import org.apache.commons.io.FileUtils;
 
