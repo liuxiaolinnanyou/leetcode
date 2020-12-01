@@ -17,7 +17,6 @@ public class Race implements Runnable {
                 }
             }
 
-
             // 判断比赛是否结束
             boolean flag = gameOver(i);
             // 如果比赛结束了，就停止程序
@@ -39,7 +38,6 @@ public class Race implements Runnable {
             System.out.println("winner:" + winner);
             return true;
         }
-
         return false;
     }
 
