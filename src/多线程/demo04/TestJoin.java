@@ -19,7 +19,7 @@ public class TestJoin implements Runnable {
 
         // 主线程
         for (int i = 0; i < 1000; i++) {
-            if (i == 200) {
+            if (i == 20) {
                 thread.join();  // 插队
             }
             System.out.println("main" + i);
