@@ -38,24 +38,24 @@ public class 删除排序数组中的重复项2 {
     // 增加一个重复个数的状态repeatNum
     // 当快指针指向的是和慢指针相同的元素，用repeatNum判断
     public static int removeDuplicates2(int[] nums) {
-        int show = 0;
+        int slow = 0;
         // 增加一个重复个数的状态
         int repeatNum = 1;
         for (int fast = 1; fast < nums.length; fast++) {
-            if (nums[fast] != nums[show]) {
-                nums[++show] = nums[fast];
+            if (nums[fast] != nums[slow]) {
+                nums[++slow] = nums[fast];
                 // 计数清除
                 repeatNum = 1;
             } else {
                 // 如果重复次数小于2次，还可以移动
                 if (repeatNum < 2) {
                     // 如果快指针和慢指针不是挨着，就需要赋值
-                    nums[++show] = nums[fast];
+                    nums[++slow] = nums[fast];
                     // 重复次数增加
                     repeatNum++;
                 }
             }
         }
-        return show + 1;
+        return slow + 1;
     }
 }
