@@ -1,7 +1,5 @@
 package 二叉树;
 
-import sun.reflect.generics.tree.Tree;
-
 import java.util.Stack;
 
 /**
