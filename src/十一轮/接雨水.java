@@ -7,6 +7,9 @@ import java.util.Stack;
  * <p>
  * 输入: [0,1,0,2,1,0,1,3,2,1,2,1]
  * 输出: 6
+ * <p>
+ * 输入：[4,2,0,3,2,5]
+ * 输出：9
  */
 public class 接雨水 {
     public static void main(String[] args) {
