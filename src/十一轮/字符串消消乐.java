@@ -9,8 +9,8 @@ package 十一轮;
  */
 public class 字符串消消乐 {
     public static void main(String[] args) {
-//        System.out.println(doReduce("abcccbxezzzrf7788fn"));
-        System.out.println(doReduce("abbccd"));
+        System.out.println(doReduce("abcccbxezzzrf7788fn"));
+//        System.out.println(doReduce("abbccd"));
     }
 
     public static String doReduce(String s) {
