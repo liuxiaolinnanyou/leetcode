@@ -1,6 +1,6 @@
 package 笔试.中兴;
 
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * 现有一个长度为 n 的数列 a ，你可以对其中每个元素最多增加或减少 1 ，也可以不操作，牛牛想知道他最少要改变多少个元素，使得数列
