@@ -1,6 +1,5 @@
 package 笔试.去哪儿网;
 
-
 import java.util.Scanner;
 
 /**
