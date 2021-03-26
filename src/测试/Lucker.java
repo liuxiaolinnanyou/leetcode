@@ -23,7 +23,7 @@ public class Lucker {
         System.out.println("开奖人：刘晓林");
         System.out.println("恭喜这些逼：");
         while (iterator.hasNext()) {
-            System.out.printf("中iphone11 pro的人是：%s\r\n", iterator.next());
+            System.out.printf("中iphone12 pro max的人是：%s\r\n", iterator.next());
         }
         System.out.println("中奖的人请与我联系。");
     }
