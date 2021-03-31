@@ -1,5 +1,7 @@
 package 笔试.神州信息;
 
+import java.util.Arrays;
+
 /**
  * 给定整数数组，使其各个数字整体向后移 N 个位置，如果后移的位置超过整数数组的长度，则将该数字从头开始继续后移。
  * <p>
@@ -10,7 +12,8 @@ package 笔试.神州信息;
  */
 public class Main1 {
     public static void main(String[] args) {
-
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        System.out.println(Arrays.toString(pushIntArray(arr, 2)));
     }
 
     public static int[] pushIntArray(int[] arr, int pushOffset) {
