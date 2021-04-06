@@ -25,6 +25,7 @@ public class 整数反转 {
         System.out.println(reverse3(123));
         System.out.println(reverse3(-123));
         System.out.println(reverse3(120));
+//        System.out.println(-123 % 10);      // -3
     }
 
     // 方法 1
