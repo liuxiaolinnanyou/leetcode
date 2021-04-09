@@ -1,5 +1,7 @@
 package Test;
 
+// 在方法里，引用类型改变指向的地址不会生效，即引用类型形参只能改变值，不能改变指向。
+// 引用类型只能通过地址来达到改变值,而不能直接改变。
 public class Example {
     String str = new String("good");
     char[] ch = {'a', 'b', 'c'};
