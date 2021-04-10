@@ -64,7 +64,6 @@ public class Main1 {
 //                else:
 //                    self.mp[ai - idx * self.x] += 1
 //                ans = min(ans, self.n - self.mp[ai - idx * self.x])
-//
 //            return ans
 //
 //
