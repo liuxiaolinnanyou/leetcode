@@ -16,7 +16,6 @@ package 笔试.滴滴春招;
  * 对3,4,5号树施法，最后变为1,3,5,7,9
  */
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
