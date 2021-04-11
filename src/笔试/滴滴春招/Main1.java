@@ -16,6 +16,9 @@ package 笔试.滴滴春招;
  * 对3,4,5号树施法，最后变为1,3,5,7,9
  */
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main1 {
@@ -30,17 +33,17 @@ public class Main1 {
         }
 
         int res = Integer.MAX_VALUE;
+        Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < n; i++) {
-            int min = 0;
-            if ((arr[i] - i * x) < 0) {
+            if ((arr[i] - i * x) <= 0) {
                 continue;
             }
-            for (int j = 0; j < n; j++) {
-                if (arr[j] != arr[i] + (j - i) * x) {
-                    min++;
-                }
+            if (!map.containsKey(arr[i] - i * x)) {
+                map.put(arr[i] - i * x, 1);
+            } else {
+                map.put(arr[i] - i * x, map.get(arr[i] - i * x) + 1);
             }
-            res = Math.min(res, min);
+            res = Math.min(res, n - map.get(arr[i] - i * x));
         }
         System.out.println(res);
     }
