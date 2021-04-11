@@ -27,7 +27,7 @@ public class Main {
         }
         for (int i = 0; i < dp[0].length; i++) {
             if (chars[0] == chars1[i]) {
-                dp[0][1] = 1;
+                dp[0][i] = 1;
             }
         }
         int max = 0;
