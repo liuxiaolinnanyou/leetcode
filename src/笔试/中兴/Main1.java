@@ -21,15 +21,17 @@ import java.util.Scanner;
 public class Main1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int T = sc.nextInt();
+        int T = sc.nextInt();         // 测试的组数
         while (T > 0) {
             T--;
-            int n = sc.nextInt();
+            int n = sc.nextInt();     // 数列的长度
             int[] a = new int[n + 5];
-            for (int i = 0; i < n; i++) a[i] = sc.nextInt();
+            for (int i = 0; i < n; i++) {
+                a[i] = sc.nextInt();
+            }
             int ans = 1000000;
             if (n > 2) {
-                for (int x = -1; x <= 1; x++)
+                for (int x = -1; x <= 1; x++) {
                     for (int y = -1; y <= 1; y++) {
                         int cnt = Math.abs(x) + Math.abs(y);
                         int d = (a[1] + y) - (a[0] + x);
@@ -44,8 +46,11 @@ public class Main1 {
                                 cnt += v;
                             }
                         }
-                        if (flag) ans = Math.min(ans, cnt);
+                        if (flag) {
+                            ans = Math.min(ans, cnt);
+                        }
                     }
+                }
                 System.out.println(ans == 1000000 ? -1 : ans);
             } else {
                 System.out.println(0);
