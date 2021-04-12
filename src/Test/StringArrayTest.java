@@ -4,7 +4,13 @@ import java.util.Arrays;
 
 public class StringArrayTest {
     public static void main(String[] args) {
-        String[][] arr = {{"hello", "world"}, {"apple", "phone"}, {"oppo", "phone"}, {"apple", "car"}};
+        String[][] arr = {
+                {"hello", "world"},
+                {"apple", "phone"},
+                {"oppo", "phone"},
+                {"apple", "car"}
+        };
+
         for (String[] str : arr) {
             System.out.println(Arrays.toString(str));
         }

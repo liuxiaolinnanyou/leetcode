@@ -6,14 +6,16 @@ import java.util.Arrays;
 
 public class StringArrayTest2 {
     public static void main(String[] args) {
-        String[][] arr = {{"Apple", "62"},
+        String[][] arr = {
+                {"Apple", "62"},
                 {"Apple", "73"},
                 {"Orange", "65"},
                 {"Orange", "90"},
                 {"Apple", "91"},
                 {"Orange", "88"},
                 {"Orange", "90"},
-                {"Apple", "100"}};
+                {"Apple", "100"}
+        };
 
         for (String[] str : arr) {
             System.out.println(Arrays.toString(str));
