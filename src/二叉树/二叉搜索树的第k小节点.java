@@ -24,12 +24,12 @@ public class 二叉搜索树的第k小节点 {
         System.out.println(kthNode(root, 3));
     }
 
-    public static TreeNode kthNode(TreeNode Root, int k) {
-        if (Root == null || k <= 0) {
+    public static TreeNode kthNode(TreeNode root, int k) {
+        if (root == null || k <= 0) {
             return null;
         }
         Stack<TreeNode> stack = new Stack<>();  // 建立栈
-        TreeNode cur = Root;
+        TreeNode cur = root;
         // 中序遍历
         while (!stack.isEmpty() || cur != null) {
             if (cur != null) {
