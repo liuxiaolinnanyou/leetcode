@@ -25,6 +25,7 @@ package 笔试.荣耀;
  * Orange 5 90
  */
 
+// AC 0
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
