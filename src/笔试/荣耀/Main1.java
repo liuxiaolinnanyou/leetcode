@@ -26,8 +26,8 @@ package 笔试.荣耀;
  */
 
 // AC 0
+
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class Main1 {
     public static void main(String[] args) {
@@ -36,8 +36,6 @@ public class Main1 {
         scanner.nextLine();
         List<String> list = new ArrayList<>();
         Set<Integer> set = new HashSet<>();
-//        HashMap<String, String> map = new HashMap<>();
-        ConcurrentHashMap<String, String> map = new ConcurrentHashMap<>();
 
         while (set.size() != n) {
             String s = scanner.nextLine();
@@ -47,41 +45,33 @@ public class Main1 {
         scanner.close();
 
         int len = list.size();
-        String[][] arr = new String[len][2];
+        String[][] arr = new String[len][3];
         int i = 0;
         for (String s : list) {
             String[] split = s.split(" ");
-            String shuiGuo = split[0];
-            String height = split[2];
-            arr[i][0] = shuiGuo;
-            arr[i][1] = height;
-            map.put(s, shuiGuo + height);
+            arr[i][0] = split[0];
+            arr[i][1] = split[1];
+            arr[i][2] = split[2];
             i++;
         }
 
-        Arrays.sort(arr, (o1, o2) -> o1[0] == o2[0] ? (Integer.parseInt(o1[1]) - Integer.parseInt(o2[1])) : (o1[0].compareTo(o2[0])));
-//        Arrays.sort(arr, (o1, o2) -> o1[1].compareTo(o2[1]));
-        Arrays.sort(arr, new Comparator<String[]>() {
-            @Override
-            public int compare(String[] o1, String[] o2) {
-                if (o1[0] == o2[0]) {
-                    return o1[1].compareTo(o2[1]);
-                }
-                return o1[0].compareTo(o2[0]);
-            }
-        });
 //        for (String[] str : arr) {
 //            System.out.println(Arrays.toString(str));
 //        }
-        for (String[] ss : arr) {
-            String str = ss[0] + ss[1];
-            Set<String> stringSet = map.keySet();
-            for (String s : stringSet) {
-                if (map.get(s).equals(str)) {
-                    System.out.println(s);
-                    map.remove(s);
-                }
+
+        Arrays.sort(arr, new Comparator<String[]>() {
+            @Override
+            public int compare(String[] o1, String[] o2) {
+                int num1 = o1[0].compareTo(o2[0]);
+                int num2 = num1 == 0 ? Integer.parseInt(o1[2]) - Integer.parseInt(o2[2]) : num1;
+                int num3 = num2 == 0 ? Integer.parseInt(o1[1]) - Integer.parseInt(o2[1]) : num2;
+                return num3;
             }
+        });
+
+        for (String[] str : arr) {
+            String ss = str[0] + " " + str[1] + " " + str[2];
+            System.out.println(ss);
         }
     }
 }
