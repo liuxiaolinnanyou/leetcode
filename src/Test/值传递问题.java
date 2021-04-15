@@ -1,5 +1,10 @@
 package Test;
 
+/**
+ * 方法并没有改变存储在变量 s1 和 s2 中的对象引用。
+ * swap 方法的参数 x 和 y 被初始化为两个对象引用的拷贝，这个方法交换的是这两个拷贝。
+ */
+
 public class 值传递问题 {
     public static void main(String[] args) {
         Student s1 = new Student("小张");
