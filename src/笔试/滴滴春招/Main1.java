@@ -31,7 +31,7 @@ public class Main1 {
             arr[i] = sc.nextInt();
         }
 
-        int res = Integer.MAX_VALUE;
+        int res = Integer.MAX_VALUE;          // 存储的是不需要调整的个数
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < n; i++) {
             if ((arr[i] - i * x) <= 0) {
