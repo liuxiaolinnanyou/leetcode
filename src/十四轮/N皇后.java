@@ -20,6 +20,7 @@ import java.util.List;
  */
 public class N皇后 {
     public static void main(String[] args) {
+        System.out.println(solveNQueens(1));
         System.out.println(solveNQueens(4));
     }
 
