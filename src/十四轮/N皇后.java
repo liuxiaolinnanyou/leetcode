@@ -50,7 +50,7 @@ public class N皇后 {
         }
     }
 
-    // row表示第几行，col表示第几列    用于验证是否可以在该位置放置皇后
+    // row 表示第几行，col 表示第几列    用于验证是否可以在该位置放置皇后
     public static boolean valid(char[][] chess, int row, int col) {
         // 判断当前列有没有皇后,因为他是一行一行往下走的，
         // 我们只需要检查走过的行数即可，通俗一点就是判断当前
@@ -75,7 +75,7 @@ public class N皇后 {
         return true;
     }
 
-    // 把数组转为list
+    // 把数组转为 list
     public static List<String> construct(char[][] chess) {
         List<String> path = new ArrayList<>();
         for (int i = 0; i < chess.length; i++) {
