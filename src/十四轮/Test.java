@@ -1,7 +1,7 @@
 package 十四轮;
 
 // 阿里面试题
-// 编写 10 个线程，第一个线程从 1 加到 10，第二个线程从 11 加到 20……第十个线程从 91 加到 100，
+// 编写 10 个线程，第一个线程从 1 加到 10，第二个线程从 11 加到 20 …… 第十个线程从 91 加到 100，
 // 最后再将 10 个线程结果相加
 public class Test {
     public static void main(String[] args) throws InterruptedException {
