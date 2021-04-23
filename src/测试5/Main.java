@@ -32,6 +32,7 @@ public class Main {
             System.out.println();
         }
 
+        // 打印最后一行
         for (int i = 0; i < cur - (sum - total); i++) {
             System.out.print('*');
         }
