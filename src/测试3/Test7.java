@@ -11,9 +11,9 @@ public class Test7 {
         Integer d1 = new Integer(2017);
         int d2 = 2017;
 
-        System.out.println(a1 == a2);
-        System.out.println(b1 == b2);
-        System.out.println(c1 == c2);
-        System.out.println(d1 == d2);
+        System.out.println(a1 == a2);     // true
+        System.out.println(b1 == b2);     // false
+        System.out.println(c1 == c2);     // false
+        System.out.println(d1 == d2);     // true
     }
 }
