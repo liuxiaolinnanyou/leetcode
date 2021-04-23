@@ -3,7 +3,7 @@ package 测试3;
 public class Test3 {
     public static int aMethod(int i) throws Exception {
         try {
-            return 1 / 10;
+            return i / 10;
         } catch (Exception e) {
             throw new Exception("exception in a Method");
         } finally {
