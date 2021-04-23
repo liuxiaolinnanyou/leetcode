@@ -23,30 +23,14 @@ public class 使用数组实现栈 {
         return top;
     }
 
-    /**
-     * 判断是否为空栈
-     *
-     * @return
-     */
     public boolean isEmpty() {
         return top == -1;
     }
 
-    /**
-     * 判断是否为满栈
-     *
-     * @return
-     */
     public boolean isFull() {
         return (top + 1) == size;
     }
 
-    /**
-     * 压栈操作
-     *
-     * @param data
-     * @return
-     */
     public boolean push(int data) {
         if (isFull()) {
             System.out.println("栈中元素已满！");
@@ -58,12 +42,6 @@ public class 使用数组实现栈 {
         }
     }
 
-    /**
-     * 出栈操作
-     *
-     * @return
-     * @throws Exception
-     */
     public int pop() throws Exception {
         if (isEmpty()) {
             throw new Exception("栈为空！");
@@ -72,11 +50,6 @@ public class 使用数组实现栈 {
         }
     }
 
-    /**
-     * 获取栈顶的元素但不删除
-     *
-     * @return
-     */
     public int peek() {
         return this.stack[getTop()];
     }
