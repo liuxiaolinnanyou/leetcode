@@ -22,6 +22,9 @@ public class 最长回文子序列 {
         System.out.println("--------------------------------");
         System.out.println(longestPalindromeSubseq2("bbbab"));
         System.out.println(longestPalindromeSubseq2("cbbd"));
+        System.out.println("--------------------------------");
+        System.out.println(longestPalindromeSubseq3("bbbab"));
+        System.out.println(longestPalindromeSubseq3("cbbd"));
     }
 
     // 动态规划法
@@ -50,6 +53,7 @@ public class 最长回文子序列 {
         return dp[0][n - 1];
     }
 
+    // 设dp[i][j]为从i到j的字符串，回文子序列的最大长度。
     public static int longestPalindromeSubseq2(String s) {
         String s1 = new StringBuilder(s).reverse().toString();
         int n = s.length();
@@ -64,5 +68,37 @@ public class 最长回文子序列 {
             }
         }
         return dp[n][n];
+    }
+
+
+    // 记忆化搜索
+    // 假设fun(char[] S , int i , int j) 返回的是串S[i...j]的最长回文子序列。
+    // 则如果S[i]==S[j] , 则：fun(S, i , j) = 2+fun(S , i+1 , j-1)
+    // 如果不等，则，fun(S , i , j) = max{ fun(S, i+1 , j) ,  fun(S , i , j-1)}
+    public static int longestPalindromeSubseq3(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        int len = s.length();
+        char[] ch = s.toCharArray();
+        int[][] ret = new int[len][len];
+        return fun(ch, 0, len - 1, ret);
+    }
+
+    public static int fun(char[] ch, int i, int j, int[][] ret) {
+        if (ret[i][j] != 0) {
+            return ret[i][j];
+        }
+        if (i == j) {            // 递归出口
+            return ret[i][j] = 1;
+        }
+        if (i == j - 1) {        // 递归出口
+            return ret[i][j] = ch[i] == ch[j] ? 2 : 1;
+        }
+        if (ch[i] == ch[j]) {
+            return ret[i][j] = 2 + fun(ch, i + 1, j - 1, ret);
+        } else {
+            return ret[i][j] = Math.max(fun(ch, i, j - 1, ret), fun(ch, i + 1, j, ret));
+        }
     }
 }
