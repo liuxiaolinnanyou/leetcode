@@ -24,6 +24,7 @@ public class Hw78_超长正整数相加 {
             String s1 = sc.nextLine();
             String s2 = sc.nextLine();
             System.out.println(addLongInteger(s1, s2));
+            System.out.println(addLongInteger3(s1, s2));
         }
     }
 
@@ -71,5 +72,36 @@ public class Hw78_超长正整数相加 {
             s += arrS[lenS - i];
         }
         return s;
+    }
+
+    public static String addLongInteger3(String str1, String str2) {
+        int lenA = str1.length();
+        int lenB = str2.length();
+        int lenS = Math.max(lenA, lenB);
+
+        int[] arr1 = new int[lenS];
+        int[] arr2 = new int[lenS];
+        int[] res = new int[lenS + 1];
+
+        for (int i = 0; i < lenA; i++) {
+            arr1[i] = str1.charAt(lenA - 1 - i) - '0';
+        }
+
+        for (int i = 0; i < lenB; i++) {
+            arr2[i] = str2.charAt(lenB - 1 - i) - '0';
+        }
+
+        for (int i = 0; i < lenS; i++) {
+            int sum = arr1[i] + arr2[i] + res[i];
+            int flag = sum / 10;
+            res[i] = sum % 10;
+            res[i + 1] += flag;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = res[lenS] == 0 ? 1 : 0; i < lenS + 1; i++) {
+            sb.append(res[lenS - i]);
+        }
+        return sb.toString();
     }
 }
