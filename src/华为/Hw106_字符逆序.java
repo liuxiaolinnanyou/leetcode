@@ -31,6 +31,7 @@ public class Hw106_字符逆序 {
         String str = "";
         for (int i = s.length() - 1; i >= 0; i--) {
             str = str + s.substring(i, i + 1);
+//            str += s.charAt(i);
         }
         return str;
     }
