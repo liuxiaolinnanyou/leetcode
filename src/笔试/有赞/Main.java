@@ -43,6 +43,44 @@ public class Main {
         }
         return flag;
     }
+
+
+    public boolean isPalindrome2(ListNode head) {
+        if (head == null || head.next == null) return true;
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        // 找到中间节点slow
+        if (fast != null) slow = slow.next;
+        fast = head;
+        // 反转后半链表
+        slow = reverseList(slow);
+        // 以后半部分链表为依据，比较两个链表的值
+        while (slow != null) {
+            if (slow.val != fast.val) {
+                return false;
+            }
+            slow = slow.next;
+            fast = fast.next;
+        }
+        return true;
+    }
+
+    // 后半部分链表反转
+    public ListNode reverseList(ListNode head) {
+        ListNode cur = null;
+        ListNode pre = head;
+        while (pre != null) {
+            ListNode temp = pre.next;
+            pre.next = cur;
+            cur = pre;
+            pre = temp;
+        }
+        return cur;
+    }
 }
 
 
