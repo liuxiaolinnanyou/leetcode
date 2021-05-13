@@ -46,7 +46,9 @@ public class Main {
 
 
     public boolean isPalindrome2(ListNode head) {
-        if (head == null || head.next == null) return true;
+        if (head == null || head.next == null) {
+            return true;
+        }
         ListNode slow = head;
         ListNode fast = head;
         while (fast != null && fast.next != null) {
@@ -54,7 +56,9 @@ public class Main {
             fast = fast.next.next;
         }
         // 找到中间节点slow
-        if (fast != null) slow = slow.next;
+        if (fast != null) {
+            slow = slow.next;
+        }
         fast = head;
         // 反转后半链表
         slow = reverseList(slow);
