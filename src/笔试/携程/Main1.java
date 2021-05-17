@@ -121,7 +121,7 @@ public class Main1 {
 class jobs {
     int start, end, profit;
 
-    jobs(int s, int e, int p) {
+    public jobs(int s, int e, int p) {
         start = s;
         end = e;
         profit = p;
