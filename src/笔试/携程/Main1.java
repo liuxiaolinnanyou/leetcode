@@ -97,9 +97,9 @@ public class Main1 {
     public static int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
         int n = startTime.length;
         int dp[] = new int[n + 1];
-        jobs[] job = new jobs[n];
+        Jobs[] job = new Jobs[n];
         for (int i = 0; i < n; i++) {
-            job[i] = new jobs(startTime[i], endTime[i], profit[i]);
+            job[i] = new Jobs(startTime[i], endTime[i], profit[i]);
         }
         Arrays.sort(job, Comparator.comparingInt(o -> o.end));
         for (int i = 0; i < n; i++) {
@@ -118,10 +118,10 @@ public class Main1 {
     }
 }
 
-class jobs {
+class Jobs {
     int start, end, profit;
 
-    public jobs(int s, int e, int p) {
+    public Jobs(int s, int e, int p) {
         start = s;
         end = e;
         profit = p;
