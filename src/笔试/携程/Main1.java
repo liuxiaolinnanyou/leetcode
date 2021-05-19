@@ -101,7 +101,7 @@ public class Main1 {
         for (int i = 0; i < n; i++) {
             job[i] = new Jobs(startTime[i], endTime[i], profit[i]);
         }
-        Arrays.sort(job, Comparator.comparingInt(o -> o.end));
+        Arrays.sort(job, Comparator.comparingInt(o -> o.end));    // 这里的 o 对应着 job 数组中的具体的 Jobs 对象
         for (int i = 0; i < n; i++) {
             dp[i] = job[i].profit;
         }
