@@ -121,9 +121,9 @@ public class Main1 {
 class Jobs {
     int start, end, profit;
 
-    public Jobs(int s, int e, int p) {
-        start = s;
-        end = e;
-        profit = p;
+    public Jobs(int start, int end, int profit) {
+        this.start = start;
+        this.end = end;
+        this.profit = profit;
     }
 }
