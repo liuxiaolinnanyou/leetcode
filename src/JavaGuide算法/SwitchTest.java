@@ -9,10 +9,16 @@ public class SwitchTest {
                 break;
             case "meng":
                 System.out.println("少一个蒙那就不是蒙！");
+                break;
             case "siyu":
                 System.out.println("这是小姨子！");
+                break;
             case "mengmeng":
                 System.out.println("恭喜，这就是她，only one！");
+                break;
+            case "otherwise":
+                System.out.println("这都猜不到？");
+                break;
         }
     }
 }
