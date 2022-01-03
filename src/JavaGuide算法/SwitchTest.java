@@ -1,5 +1,8 @@
 package JavaGuide算法;
 
+/**
+ * 表达式的取值byte、short、int、char，JDK5以后可以是枚举，JDK7以后可以是字符串。
+ */
 public class SwitchTest {
     public static void main(String[] args) {
         String s = "mengmeng";
