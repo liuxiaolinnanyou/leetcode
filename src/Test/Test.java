@@ -9,5 +9,12 @@ public class Test {
         System.out.println("--------------------------");
         System.out.println(4 * 0.1);
         System.out.println(3 * 0.1);
+
+        String str = "a\\b\\c\\d";
+        System.out.println(str);
+        String[] split = str.split("\\\\");
+        for (String s : split) {
+            System.out.println(s);
+        }
     }
 }
