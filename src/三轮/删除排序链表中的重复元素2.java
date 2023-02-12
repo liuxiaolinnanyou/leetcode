@@ -15,7 +15,18 @@ import java.util.HashMap;
  */
 public class 删除排序链表中的重复元素2 {
     public static void main(String[] args) {
+        ListNode l1 = new ListNode(1);
+        ListNode l2 = new ListNode(1);
+        ListNode l3 = new ListNode(1);
+        ListNode l4 = new ListNode(2);
+        ListNode l5 = new ListNode(3);
+        l1.next = l2;
+        l2.next = l3;
+        l3.next = l4;
+        l4.next = l5;
+        l5.next = null;
 
+        System.out.println(deleteDuplicates(l1));
     }
 
     public static ListNode deleteDuplicates(ListNode head) {
